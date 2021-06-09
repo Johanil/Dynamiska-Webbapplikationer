@@ -23,10 +23,16 @@
     </ul>
     <hr />
     <h2>Boka chokladprovning</h2>
+    <!-- form anger att elementet är ett formulär som används för att samla in user inputs -->
     <form>
+        <!-- fieldset används för att gruppera element i ett formulär  -->
         <fieldset>
+            <!-- representerar namnet på sitt förälderelement fieldset-->
             <legend>Välj datum:</legend>
+            <!-- input bestämmer typen av fält, standard är text, denna typ är radiobuttons -->
             <input type="radio" id="radio1">
+            <!-- label, namnet för en specifik radioknapp kopplat genom ett id -->
+            <!-- br/ används för att skapa radbrytningar -->
             <label for="radio1">30 april</label><br/>
             <input type="radio" id="radio2">
             <label for="radio2">2 maj</label><br/>
@@ -41,7 +47,9 @@
         </fieldset>
         <fieldset>
             <legend>Välj antal personer:</legend>
+            <!-- select används för att skapa en dropdown meny-->
             <select>
+                <!-- options används för att skapa alternativ för en dropdown meny-->
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -67,6 +75,7 @@
             <label for="meddelande">Meddelande:</label>
             <textarea id="meddelande"></textarea><br/>
         </fieldset>
+        <!-- button används för att skapa en knapp -->
         <button>Boka</button>
     </form>
     <hr />
