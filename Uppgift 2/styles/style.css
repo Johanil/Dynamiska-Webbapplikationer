@@ -10,48 +10,125 @@
         flex-direction: column;
     }
     #story{
-        background-color:rgba(97, 66, 58, 0.4);
-        border-radius: 1rem;
-        padding: 0.5rem;
-        margin:  0.5rem;
+        background-color:rgba(97, 66, 58, 0.15);
+        border-radius: 1em;
+        padding: 0.5em;
+        margin:  0.5em;
         display: grid;
     }
+    #story h2{
+        text-align: center;
+        color: black;
+    }
     #story img{
-        width:100%;
+        width:75%;
+        margin:auto;
+    }
+    #form-name, #form-email{
+        border-radius: 0.2em;
+        border:thin none rgba(78, 108, 117, 0.1);
+        padding: 0.5em;
+        margin-top: 0.5em;
+        width: 75%;
+    }
+    #form-setup{
+        padding: 0em;
+        margin: 0em;
+        width: 40%;
     }
     #classes{
         background-color:rgba(78, 108, 117, 0.1);
-        border-radius: 1rem;
-        padding: 0.5rem;
-        margin: 0.5rem;
+        border-radius: 1em;
+        padding: 0.5em;
+        margin: 0.5em;
         
     }
-    aside{
-        padding: 0.5rem;
-        background-color: (204, 171, 151, 1);
-        
-    }
-    footer{
-
-    }
-    table{
-        border: 0.1rem solid black;
-        display: flex;
-        justify-content: space-between;
+    input{
+        border-radius: 0.2em;
+        border:thin none rgba(78, 108, 117, 0.1);
+        margin-top: 0.5em;
+        width: auto;
     }
     #classes h2{
-        color: black;
+        text-align: center;
+    }
+    form h3{
+        margin-bottom:0.1em;
+        text-align: center;
+    }
+    input{
+        width:100%;
+        height: 1.5em;
+    }
+    aside{
+        padding: 0.5em;
+        background-color: rgba(204, 171, 151, 1);
+        
+    }
+    form li{
+        flex-direction: row;
+    }
+    aside ul{
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        justify-content: center;
+    }
+    aside ul li{
+        padding: 0.1em;
+
+    }
+    ul ul{
+        flex-direction: row;
+    }
+    ul ul li{
+        padding: 1em;
+    }
+    form ul{
+        padding:0%;
+    }
+    form label{
+        text-align: center;
+    }
+    footer{
+        position: static;
+    }
+    table{
+        border-collapse: collapse;
+        margin: 2em 2em;
+        padding: 4em;
+        border-radius: 2em;
+        color:whitesmoke;
+        background-color: rgba(78, 108, 117, 0.5);
+        font-size: 0.7em;
+        box-shadow: 0 0 0.1em rgba(0, 0, 0, 0.51);
+        flex-flow: row wrap;
+    }
+
+    tr,th{
+        padding: 1em 2em;
+        text-align: center;
+    }
+    td{
+        color: whitesmoke;
+        padding: 0.5em;
+        text-align: left;
+    }
+
+    #classes h2{
+        color: whitesmoke
     }
     header{
         display: flex;
-        padding-bottom: 2.5rem;
+        padding-bottom: 0.5em;
         flex-direction: column;
         width: 99.9%;
         position: fixed;
         background-color: rgba(194, 204, 205, 1);
+        background-size: cover;
     }
     header p{
-        margin-left: 0.7rem;
+        margin-left: 0.7em;
     }
     body{
         width: 100%;
@@ -66,12 +143,12 @@
     }
     #products{
         display: grid;
-        margin-top: 10rem;
+        margin-top: 10em;
     }
     article{
-        border-radius: 2rem;
-        padding: 1rem;
-        margin: 1rem;
+        border-radius: 2em;
+        padding: 1em;
+        margin: 1em;
         background-color: rgba(204, 127, 89, 0.35);
     }
     article:hover{
@@ -80,7 +157,7 @@
     }
     article p,h2{
         color: white;
-        margin: 0.8rem;
+        margin: 0.8em;
         margin-left: 0%;
     }
     article h3{
@@ -93,7 +170,7 @@
     }
     nav{
         overflow: hidden;
-        margin-top: 7rem;
+        margin-top: 7em;
         width: 99.9%;
         align-items: center;
         background-color:#CC7F59;
@@ -112,14 +189,14 @@
     nav ul li{
         display:inline-flex;
         align-items: center;
-        padding: 0.8rem;
+        padding: 0.8em;
     }
     nav ul li a{
         transition: 0.3s ease 0s;
-        border-radius: 0.2rem;
+        border-radius: 0.2em;
         color:whitesmoke;
         font-size: large;
-        padding: 0.1rem;
+        padding: 0.1em;
         text-decoration: underline;
     }
     
@@ -127,11 +204,11 @@
         background-color:rgba(78, 108, 117, 1);
     }
     button {
-        padding: 1rem;
+        padding: 1em;
         background-color: rgba(0,122,169,1);
         border: none;
-        border-radius: 2rem;
-        padding: 1rem;
+        border-radius: 2em;
+        padding: 1em;
         cursor: pointer;
         transition: all 0.3s ease 0s;
     }
@@ -151,8 +228,8 @@
     }
     h1{
         color: #61423A;
-        margin: 0.5rem;
-        padding: 0.5rem;
+        margin: 0.5em;
+        padding: 0.2em;
     }
     header p{
         color: #4E6C75;
