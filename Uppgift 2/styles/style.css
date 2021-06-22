@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@media only screen and (max-width: 480px)
+@media only screen and (max-width: 645px)
 {
     html{
         background-color:#C2CCCD ;
@@ -57,7 +57,7 @@
         text-align: center;
     }
     input{
-        width:100%;
+        width:99%;
         height: 1.5em;
     }
     aside{
@@ -95,9 +95,9 @@
     }
     table{
         border-collapse: collapse;
-        margin: 2em 2em;
+        margin: 2em;
         padding: 4em;
-        border-radius: 2em;
+        border-radius: 1em;
         color:whitesmoke;
         background-color: rgba(78, 108, 117, 0.5);
         font-size: 0.7em;
@@ -143,7 +143,8 @@
     }
     #products{
         display: grid;
-        margin-top: 10em;
+        margin-top: 12em;
+
     }
     article{
         border-radius: 2em;
@@ -241,14 +242,174 @@
 
     
 }
-@media(min-width: 481px) and (max-width: 1000px)
+@media(min-width: 646px) 
 {
-    /*skriv in stilregler */
+    html{
+        background-color:#C2CCCD ;
+        
+    }
+    main{
+        display:flex;
+        flex-direction: column;
+        justify-content:center ;
+        align-items: center;
+    }
+    section{
+        display:flex;
+        flex-direction: row;
+        margin-top: 15em;
+    }
+    #classes{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: x-large;
+    }
+    #story{
+        width:75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        font-size: x-large;
+    }
+    aside{
+        text-align: center;
+        
+    }
+    form ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        
+    }
+    form{
+        flex-direction: column;
+    }
+
+    table{
+        border-collapse: collapse;
+        margin: 2em;
+        padding: 4em;
+        border-radius: 1em;
+        color:whitesmoke;
+        background-color: rgba(78, 108, 117, 0.5);
+        font-size: 0.7em;
+        box-shadow: 0 0 0.1em rgba(0, 0, 0, 0.51);
+        flex-flow: row wrap;
+    }
+
+    tr,th{
+        padding: 1em 2em;
+        text-align: center;
+    }
+    td{
+        color: whitesmoke;
+        padding: 0.5em;
+        text-align: left;
+    }
+
+    header{
+        display: flex;
+        padding-bottom: 0.5em;
+        flex-direction: column;
+        width: 99.9%;
+        position: fixed;
+        background-color: rgba(194, 204, 205, 1);
+        background-size: cover;
+    }
+    header p{
+        margin-left: 2.5em;
+    }
+    body{
+        width: 100%;
+        font-size: large;
+        font-family: 'Montserrat', sans-serif;
+        margin: 0%;
+        overflow:auto;
+        overflow-x: hidden;
+    }
+    article{
+        border-radius: 2em;
+        padding: 1em;
+        margin: 1em;
+        background-color: rgba(204, 127, 89, 0.35);
+    }
+    nav{
+        overflow: hidden;
+        margin-top: 7em;
+        width: 99.9%;
+        align-items: center;
+        background-color:#CC7F59;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+    }
+    nav ul{
+        align-items: center;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0%;
+    }
+    nav ul li{
+        display:inline-flex;
+        align-items: center;
+        padding: 0.8em;
+    }
+    nav ul li a{
+        transition: 0.3s ease 0s;
+        border-radius: 0.2em;
+        color:whitesmoke;
+        font-size: large;
+        padding: 0.1em;
+        text-decoration: underline;
+    }
+    
+    nav ul li a:hover{
+        background-color:rgba(78, 108, 117, 1);
+    }
+    button {
+        padding: 1em;
+        background-color: rgba(0,122,169,1);
+        border: none;
+        border-radius: 2em;
+        padding: 1em;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
+    article img{
+        width: 100%;
+    }
+    li, a, button{
+        font-weight: 500;
+        font-size: medium;
+        color:#CC7F59;
+        text-decoration: none;
+        
+    }
+    p{
+        font-size: small;
+        color:black;
+    }
+    h1{
+        color: #61423A;
+        margin: 0.5em;
+        padding: 0.2em;
+    }
+    header p{
+        color: #4E6C75;
+    }
+    a{
+        font-size: small;
+        color: rgba(78, 108, 117, 1);
+    }
+
+    
 }
-@media(min-width: 1001px)
-{
-       /*skriv in stilregler */
-}
+
 
 
 
