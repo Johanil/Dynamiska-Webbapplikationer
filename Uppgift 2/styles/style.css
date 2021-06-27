@@ -242,6 +242,9 @@
     display: flex;
     flex-direction: row;
   }
+  article:hover{
+    background-color: rgba(78, 108, 117, 0.35);
+  }
   #classes {
     display: flex;
     flex-direction: column;
@@ -259,6 +262,10 @@
     font-size: x-large;
     padding: 0.5em;
   }
+
+  #story img{
+    padding: 0.5em;
+}
 
   #products {
     flex-grow: 1;
@@ -304,9 +311,7 @@
     margin: 0em;
     width: 40%;
   }
-  #story img{
-      padding: 0.5em;
-  }
+
   aside {
     text-align: center;
   }
@@ -368,6 +373,9 @@
     margin: 1em;
     background-color: rgba(204, 127, 89, 0.35);
   }
+  article img {
+    width: 100%;
+  }
   nav {
     overflow: hidden;
     margin-top: 7em;
@@ -412,9 +420,7 @@
     cursor: pointer;
     transition: all 0.3s ease 0s;
   }
-  article img {
-    width: 100%;
-  }
+
   li,
   a,
   button {
