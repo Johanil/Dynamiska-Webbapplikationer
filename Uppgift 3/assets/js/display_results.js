@@ -17,8 +17,8 @@ function addRow(gamenumber, outcome, teamone, teamtwo){
     let tr = document.createElement("tr")
     tr.appendChild(addGameNumber(gamenumber));
     tr.appendChild(addTeams(teamone,teamtwo));
-    let td = document.createElement("td")
-    addOutcomes(outcome,td);
+    
+    addOutcomes(outcome,tr);
     tr.appendChild(document.createElement("span"));
     return tr;
 }
@@ -42,11 +42,15 @@ function addOutcomes(outcome, tr){
     return tr;
 }
 function addOutcome(outcome, oneXTwo){
+    let td = document.createElement("td")
     if (outcome == oneXTwo) {
-        return createStemKick();
-
+        td.appendChild(createStemKick());
     }
-    else return createBlank();
+    else{
+       td.appendChild(createBlank());
+    }
+    return td;
+    
 
 }
 function createStemKick(){
