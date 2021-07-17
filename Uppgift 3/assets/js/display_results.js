@@ -3,7 +3,6 @@ import fetchStryktipsData from "./fetch_stryktipset.js";
 export default async function displayStryktipsData(){
     const data = await fetchStryktipsData();
     addGames(data);
-    console.log(data.matches);
 }
 
 
@@ -13,10 +12,18 @@ async function addGames(data){
         table.appendChild(addRow(game.gameNumber,game.gameInfo.outcome,game.opponents.one,game.opponents.two))
     });
 }
+function createTeam(team){
+    let fixedTeam = document.createElement("a")
+    fixedTeam.innerText = team.name
+    fixedTeam.setAttribute("href", team.homepage)
+    return fixedTeam;
+}
 function addRow(gamenumber, outcome, teamone, teamtwo){
     let tr = document.createElement("tr")
     tr.appendChild(addGameNumber(gamenumber));
-    tr.appendChild(addTeams(teamone,teamtwo));
+    let teamOne = createTeam(teamone);
+    let teamTwo = createTeam(teamtwo);
+    tr.appendChild(addTeams(teamOne,teamTwo));
     
     addOutcomes(outcome,tr);
     tr.appendChild(document.createElement("span"));
@@ -28,8 +35,17 @@ function addGameNumber(gamenumber){
     return td;
 }
 function addTeams(teamone,teamtwo){
+    console.log(teamone);
     let td = document.createElement("td");
-    td.innerHTML = teamone.name +" -VS- "+ teamtwo.name;
+    let spanOne = document.createElement("span");
+    let spanVS = document.createElement("span");
+    let spanTwo = document.createElement("span");
+    spanOne = teamone;
+    spanVS.innerText = " -VS- ";
+    spanTwo = teamtwo;
+    td.appendChild(spanOne);
+    td.appendChild(spanVS)
+    td.appendChild(spanTwo);
     return td;
 }
 function addOutcomes(outcome, tr){
