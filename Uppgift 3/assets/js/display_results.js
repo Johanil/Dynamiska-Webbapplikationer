@@ -10,43 +10,58 @@ export default async function displayStryktipsData(){
 async function addGames(data){
     let table = document.querySelector('tbody')
     data.matches.forEach(game => {
-        table.appendChild(createRow(game.gameNumber,game.gameInfo.outcome,game.opponents.one,game.opponents.two))
+        table.appendChild(addRow(game.gameNumber,game.gameInfo.outcome,game.opponents.one,game.opponents.two))
     });
 }
-function createRow(gamenumber, outcome, teamone, teamtwo){
+function addRow(gamenumber, outcome, teamone, teamtwo){
     let tr = document.createElement("tr")
-    let tdGameNumber = document.createElement("td")
-    let tdTeams = document.createElement("td");
-    tdTeams.innerHTML = teamone.name +" -VS- "+ teamtwo.name;
-    tdGameNumber.innerHTML = gamenumber;
-    tr.appendChild(tdGameNumber);
-    tr.appendChild(tdTeams);
-    console.log(gamenumber);
-
-    tr.appendChild(createOutcome(outcome));
+    tr.appendChild(addGameNumber(gamenumber));
+    tr.appendChild(addTeams(teamone,teamtwo));
+    let td = document.createElement("td")
+    addOutcomes(outcome,td);
+    tr.appendChild(document.createElement("span"));
     return tr;
-    
 }
-function createOutcome(outcome){
+function addGameNumber(gamenumber){
     let td = document.createElement("td");
-    let div = document.createElement("div");
-    div.classList.add("stem");
-    if(outcome == "1")
-    {
-        td.appendChild(div);
-    }
-    else if(outcome == "X"){
-        
-    }
-    else if(outcome == "X"){
-        
-    }
+    td.innerHTML = gamenumber;
     return td;
 }
-
-
-function addGameToTable(){
-    const p = document.createElement('td');
-    p.innerText = 'GF';
-    document.querySelector('tbody').appendChild(p);
+function addTeams(teamone,teamtwo){
+    let td = document.createElement("td");
+    td.innerHTML = teamone.name +" -VS- "+ teamtwo.name;
+    return td;
 }
+function addOutcomes(outcome, tr){
+    let tdOne = addOutcome(outcome, "1")
+    let tdX = addOutcome(outcome, "X")
+    let tdTwo = addOutcome(outcome, "2")
+    tr.appendChild(tdOne);
+    tr.appendChild(tdX);
+    tr.appendChild(tdTwo);
+    return tr;
+}
+function addOutcome(outcome, oneXTwo){
+    if (outcome == oneXTwo) {
+        return createStemKick();
+
+    }
+    else return createBlank();
+
+}
+function createStemKick(){
+    let span = document.createElement("span")
+    span.classList.add("checkmark")
+    let stemDiv = document.createElement("div")
+    stemDiv.classList.add("stem")
+    let kickDiv = document.createElement("div")
+    kickDiv.classList.add("kick")
+    span.appendChild(stemDiv)
+    span.appendChild(kickDiv)
+    return span;
+}
+function createBlank(){
+    let span = document.createElement("span")
+    return span;
+}
+
