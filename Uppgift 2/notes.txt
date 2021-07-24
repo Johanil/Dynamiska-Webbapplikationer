@@ -1,7 +1,0 @@
-https://coolors.co/ccab97-4e6c75-61423a-cc7f59-c2cccd
-
-$tumbleweed: rgba(204, 171, 151, 1);
-$deep-space-sparkle: rgba(78, 108, 117, 1);
-$dark-liver-horses: rgba(97, 66, 58, 1);
-$copper-crayola: rgba(204, 127, 89, 1);
-$silver-sand: rgba(194, 204, 205, 1);
