@@ -18,9 +18,6 @@ function addWeatherData(data) {
     let datetimeHours = datetime.getHours();
     let date = datetime.getDate();
     let acceptableUTCHours = [4, 10, 16];
-    console.log(Date.UTC);
-    console.log(forecast.validTime.toString() + " " + datetime.getHours());
-    console.log(datetimeHours);
     forecast.parameters.map((p) => {
       if (acceptableUTCHours.includes(datetimeHours)) {
         if (p.name == "wd") {
