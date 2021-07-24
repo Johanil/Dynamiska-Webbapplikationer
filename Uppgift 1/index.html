@@ -1,0 +1,99 @@
+<!-- Doctype anger dokumenttype, i detta fall html -->
+<!DOCTYPE html>
+<!-- html elementet omger alla element av dess typ och har attributet lang för språk-->
+<html lang="sv">
+
+<!--Head används för att länka till stylesheet, titel och ange charset-->
+
+<head>
+    <!-- anger att sidan använder sig av charsettet UTF-8 och däremed kan representera alla bokstäver i the unicode standard-->
+    <meta charset="UTF-8" />
+    <!-- anger att denna sida använder stylesheetet som finns i stil mappen och heter style.css -->
+    <link rel=stylesheet href="stil/style.css" />
+    <!--står för titeln på sidan som syns längst upp i webbläsaren ovanför adressfältet -->
+    <title>Café Choco-Latte</title>
+</head>
+
+<!-- Används för allt innehåll på sidan -->
+<body>
+    <!--denna div innehåller alla andra organisatioriska html5 element i bodyn av dokumentet-->
+    <div id="container">
+        <!--headern innehåller alla element som är längst upp på sidan, denna del ser likadan ut på alla sidor i denna uppgift.-->
+        <header>
+            <!-- h1 en överrubrik för sidans titel -->
+            <h1>Café Choco-Latte</h1>
+            <!-- h2 en mindre titel som används som underrubriker -->
+            <h2>Fantastiskt kaffe & läckra bakverk</h2>
+            <!-- p, eller paragraph talar om att nu kommer texten, varje p är ett stycke och kan användas för att göra radbrytningar-->
+            <p>Vi vill vara en kaffeoas där du känner de intensiva dofterna från kaffet när du kliver in genom dörren.
+                Vi är
+                en
+                plats där du för varje kopp kaffe och bakverk ska uppleva en sann njutning och smaksensation. Vi vill ge
+                dig
+                hög
+                kvalitet utan att tumma på rättvisan gentemot kaffe- och kakoodlarna.</p>
+            <!--nav används som för att identifiera containern för navigering på sidan på ett tydligt vis, i detta fall för att ta sig till andra delar.-->      
+            <nav>
+                <!-- ul används för att skapa punktlistor som i vårt fall är navigeringsmenyn för hemsidan -->
+                <ul>
+                    <!-- li är elementen i punktlistan eller den vanliga listan (ol) och används för att lägga en punkt innan varje item -->
+                    <!-- a, kallas också anchor och används för att skapa länkar till andra sidor/platser -->
+                    <li><a href="./index.html">Hem</a></li>
+                    <li><a>Kaffemeny</a></li>
+                    <li><a>Chokladmeny</a></li>
+                    <li><a href="./chokladprovning.html">Chokladprovning</a></li>
+                    <li><a>Om oss</a></li>
+                </ul>
+                <!-- hr används för att göra en linje över sidan för att "dela" textdelarna mot varandra-->
+            </nav>
+            <hr />
+        </header>
+        <!--section definerar en sektion i html dokumentet som tillhör en viss grupp, denna används för att gruppera de olika delarna och skapa en tydlig separation mellan de olika delarna i html-dokumentet.-->
+        <section>
+            <!-- h3 är en mindre underrubrik-->
+            <h3>Fantastiskt</h3>
+            <!-- img elementet används för att lägga till en bild på sidan, den har ocksp attributen för bildens höjd och bredd, samt en text för syntolkning bland annat. -->
+            <img src="stil/images/cols-img.png" height="80" width="76" alt="Hot coffe">
+            <p>Intensiva dofter, fylliga smaker och oavsett rostning och tillredning finns kaffe för alla smaker. Vårt
+                kaffe
+                är
+                fantastiskt! <a>Vår kaffemeny</a></p>
+            <h3>Läckra bakverk</h3>
+            <img src="stil/images/cols-img2.png" height="80" width="76" alt="Cartoon pastry">
+            <p>Choklad av hög kvalitet i varje bakverk. Mäktiga och smakrika. Himmelriket för chokladälskaren! <a>Vår
+                    chokladmeny</a></p>
+            <h3>Här hittar du oss</h3>
+            <img src="stil/images/cols-img3.png" height="80" width="76" alt="Ruler and pen">
+            <p>Du hittar oss på en bakgata i närheten av Kungsparken. Kolla in kartan och gör ett besök. <a>Se karta</a>
+            </p>
+            <hr />
+        </section>
+        
+        <section>
+            <h3>Nyheter</h3>
+            <!--article används för att visa upp de olika händelserna istället för att gör de till en och samma detta då det kan komma att bli fler händelser i framtiden som hämtas från en databas tex.-->
+            <article>
+                <!-- h4 är en till underrubrik som är mindre än h3 -->
+                <h4>25 april</h4>
+                <h4>Chokladprovning</h4>
+                <p>Boka in dig själv, kollegorna, kompisarna till en kväll där vi testar choklad av olika kakobönor och
+                    pratar
+                    historia kring chokladen.<br /><a href="./chokladprovning.html">Läs mer om chokladprovning</a></p>
+            </article>
+            <article>
+                <h4>22 april</h4>
+                <h4>Ny kaffesmak</h4>
+                <p>Vi testar hela tiden nya rostningar och smaksättningar. Denna dag är det premiär för vår nya smak
+                    Romerska
+                    bågar.<br /> <a>Läs mer om kaffesmaker</a></p>
+            </article>
+        </section>
+        <!--footer innehåller information om för fattaren eller copyright information-->
+        <footer>
+            <hr />
+            <p>&copy; Copyright 2019 | Café Choco-Latte</p>
+        </footer>
+    </div>
+</body>
+
+</html>
