@@ -20,16 +20,60 @@
       </header>
       <nav>
         <ul>
-            <li><a href="/index.html">Hem</a></li>
-            <li><a href="/html/gasthamnen.html">Gästplatser</a></li>
-            <li><a href="/html/aktiviteter-djupviken.html">Aktiviteter</a></li>
-            <li><a href="/html/historia.html">Historia</a></li>
-            <li><a href="/html/foreningen.html">Föreningen</a></li>
-            <li><a href="/html/kontakta-oss.html">Kontakta oss</a></li>
-          </ul>
+          <li><a href="/index.html">Hem</a></li>
+          <li><a href="/html/gasthamnen.html">Gästplatser</a></li>
+          <li><a href="/html/aktiviteter-djupviken.html">Aktiviteter</a></li>
+          <li><a href="/html/historia.html">Historia</a></li>
+          <li><a href="/html/foreningen.html">Föreningen</a></li>
+          <li><a href="/html/kontakta-oss.html">Kontakta oss</a></li>
+        </ul>
       </nav>
       <main>
-
+        <h2>Kontakta oss</h2>
+        <section id="contact-info">
+          <h3>Kontaktuppgifter</h3>
+          <p>
+            Hamnfogde Bo Lautin, mobil 0707-920310 Djupviks hamnförening c/o
+            Ekholm Eksta Hägur 170 623 54 Klintehamn
+          </p>
+        </section>
+        <form>
+          <h3>Kontaktformulär</h3>
+          <div>
+            <label>Rubrik:</label>
+            <input type="text" name="rubrik" id="topic" required />
+          </div>
+          <div>
+            <label>Beskrivning:</label>
+            <input type="text" name="rubrik" id="topic" required />
+          </div>
+          <div>
+            <h4>Vad gäller ärendet?</h4>
+            <label>Båtplats</label>
+            <input type="radio" name="båtplats" id="boat-parking" required />
+            <label>Medlemskap</label>
+            <input type="radio" name="medlem" id="member" required />
+            <label>Övrigt</label>
+            <input type="radio" name="övrigt" id="other" required />
+          </div>
+          <div>
+            <h4>Hur vill du bli kontaktad?</h4>
+            <label>Mail</label>
+            <input type="radio" name="mail" id="email" required />
+            <label>Telefon</label>
+            <input type="radio" name="telefon" id="phone" required />
+            <label>Inte alls</label>
+            <input type="radio" name="inte" id="not" required />
+          </div>
+          <div>
+            <label>Telefonnummer:</label>
+            <input type="text" name="rubrik" id="topic" required />
+          </div>
+          <div>
+            <label>Mail:</label>
+            <input type="text" name="rubrik" id="topic" required />
+          </div>
+        </form>
       </main>
       <footer>
         <hr />
