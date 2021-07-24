@@ -15,38 +15,43 @@ function addWeatherData(data) {
     let windStrength = "";
     let weatherStatus = "";
     let datetime = new Date(forecast.validTime);
-    let acceptableHours = [6,12,18];
-    console.log(forecast.validTime.toString()+" "+datetime.getHours())
+    let datetimeHours = datetime.getHours();
+    let date = datetime.getDate();
+    let acceptableUTCHours = [4, 10, 16];
+    console.log(Date.UTC);
+    console.log(forecast.validTime.toString() + " " + datetime.getHours());
+    console.log(datetimeHours);
     forecast.parameters.map((p) => {
-        if (acceptableHours.includes(datetime.getUTCHours())) {
-      if (p.name == "wd") {
-        windDirection = p.values.toString();
+      if (acceptableUTCHours.includes(datetimeHours)) {
+        if (p.name == "wd") {
+          windDirection = p.values.toString();
+        }
+        if (p.name == "t") {
+          temperature = p.values.toString();
+        }
+        if (p.name == "ws") {
+          windStrength = p.values.toString();
+        }
+        if (p.name == "Wsymb2") {
+          weatherStatus = p.values.toString();
+        }
+        weatherArticle.innerHTML = addForecast(
+          date,
+          datetimeHours,
+          windDirection,
+          temperature,
+          windStrength,
+          weatherStatus
+        );
       }
-      if (p.name == "t") {
-        temperature = p.values.toString();
-      }
-      if (p.name == "ws") {
-        windStrength = p.values.toString();
-      }
-      if (p.name == "Wsymb2") {
-        weatherStatus = p.values.toString();
-      }
-      weatherArticle.innerHTML = addForecast(
-        new Date(forecast.validTime),
-        windDirection,
-        temperature,
-        windStrength,
-        weatherStatus
-      );
-    }
     });
-
 
     weatherSection.appendChild(weatherArticle);
   });
 }
 
 function addForecast(
+  date,
   datetime,
   windDirection,
   temperature,
@@ -54,7 +59,9 @@ function addForecast(
   weatherStatus
 ) {
   return (
-    datetime+", "+datetime.getHours() +
+    date +
+    " " +
+    (datetime + 2).toString() +
     " " +
     temperature +
     "C " +
