@@ -10,7 +10,7 @@
   body {
     width: 100%;
     font-size: large;
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 0%;
   }
   section {
@@ -47,6 +47,7 @@
     );
   }
   header h1 {
+    font-family: 'Permanent Marker', cursive;
     text-align: center;
     font-size: xx-large;
     margin-top: 0.5em;
