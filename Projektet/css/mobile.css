@@ -147,8 +147,10 @@
     font-size: xx-large;
     margin-top: 0%;
   }
-  #globe {
+  #english {
     cursor: pointer;
     margin: 0em;
+    height: 100%;
+    width: 100%;
   }
 }
