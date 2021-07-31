@@ -14,19 +14,75 @@
   <body>
     <div id="container">
       <header>
-        <h1>Djupviken</h1>
-        <hr />
+        <div id="header-top">
+          <input type="button" id="nav_en" />
+          <label for="nav_en" class="nav_toggle">
+            <svg
+              id="globe"
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 396.1 396.1"
+            >
+              <path
+                d="M260,458.05a197.18,197.18,0,0,1-128.79-47.71,11,11,0,0,1-2.15-1.87,197.79,197.79,0,0,1,0-296.94,11,11,0,0,1,2.15-1.87,197.69,197.69,0,0,1,257.58,0,11,11,0,0,1,2.15,1.87,197.79,197.79,0,0,1,0,296.94,11,11,0,0,1-2.15,1.87A197.18,197.18,0,0,1,260,458.05Zm-59.87-108.7a244.37,244.37,0,0,0,12.71,38.55c13.25,30.6,30.44,48.15,47.16,48.15s33.91-17.55,47.16-48.15a244.37,244.37,0,0,0,12.71-38.55,144.67,144.67,0,0,0-119.74,0ZM149,396.51a175.85,175.85,0,0,0,62.17,32.64,157,157,0,0,1-18.46-32.52,257.85,257.85,0,0,1-12.4-36.25l-.83.56C161.14,373.41,151.44,386.93,149,396.51Zm190.79-36.13a259.14,259.14,0,0,1-12.39,36.25,157.42,157.42,0,0,1-18.47,32.52,175.77,175.77,0,0,0,62.17-32.64c-2.49-9.58-12.19-23.1-30.48-35.57Zm5.17-22.76q4.11,2.44,8,5.14c16.6,11.32,28.85,24.51,35.38,37.63A175.36,175.36,0,0,0,435.71,271H351.83A410,410,0,0,1,344.91,337.62ZM84.29,271a175.36,175.36,0,0,0,47.37,109.39c6.53-13.12,18.78-26.31,35.38-37.63q3.93-2.68,8.05-5.14A411.15,411.15,0,0,1,168.17,271ZM260,314.38a168,168,0,0,1,64.44,12.95A391.39,391.39,0,0,0,329.82,271H190.18a391.39,391.39,0,0,0,5.38,56.33A168,168,0,0,1,260,314.38ZM351.83,249h83.88a175.4,175.4,0,0,0-47.65-109.69c-6.66,12-19,23.39-36,32.81q-4.08,2.25-8.38,4.3A405.15,405.15,0,0,1,351.83,249Zm-161.65,0H329.82A385.45,385.45,0,0,0,323,184.64a206,206,0,0,1-63,9.67,206,206,0,0,1-63-9.67A385.45,385.45,0,0,0,190.18,249ZM84.29,249h83.88a405.15,405.15,0,0,1,8.11-72.58q-4.29-2-8.38-4.3c-17-9.42-29.3-20.79-36-32.81A175.4,175.4,0,0,0,84.29,249Zm117.78-85.83A182.84,182.84,0,0,0,260,172.31a182.84,182.84,0,0,0,57.93-9.14,234.44,234.44,0,0,0-10.77-31.07C293.91,101.5,276.72,84,260,84s-33.91,17.55-47.16,48.15A234.44,234.44,0,0,0,202.07,163.17ZM149,123.47c2.85,10.14,14.59,21.76,32.67,31.12a251.34,251.34,0,0,1,11-31.22,157,157,0,0,1,18.46-32.52A175.72,175.72,0,0,0,149,123.47ZM308.88,90.85a157.42,157.42,0,0,1,18.47,32.52,253,253,0,0,1,11,31.22c18.08-9.36,29.82-21,32.67-31.12A175.72,175.72,0,0,0,308.88,90.85Z"
+                transform="translate(-61.95 -61.95)"
+              />
+            </svg>
+          </label>
+          <h1>Djupvik</h1>
+          <input type="checkbox" id="nav_checkbox" />
+          <label for="nav_checkbox" class="nav_toggle">
+            <svg
+              id="hamburger"
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 440.62 411.38"
+            >
+              <defs>
+                <style>
+                  .cls-1 {
+                    stroke: #000;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 74px;
+                  }
+                </style>
+              </defs>
+              <line class="cls-1" x1="403.62" y1="205.69" x2="37" y2="205.69" />
+              <line class="cls-1" x1="403.62" y1="37" x2="37" y2="37" />
+              <line class="cls-1" x1="403.62" y1="374.38" x2="37" y2="374.38" />
+            </svg>
+            <svg
+              id="close"
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 447.54 447.54"
+            >
+              <defs>
+                <style>
+                  .cls-1 {
+                    stroke: #000;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 74px;
+                  }
+                </style>
+              </defs>
+              <line class="cls-1" x1="410.54" y1="37" x2="37" y2="410.54" />
+              <line class="cls-1" x1="37" y1="37" x2="410.54" y2="410.54" />
+            </svg>
+          </label>
+        </div>
+        <nav>
+          <ul class="nav_menu">
+            <li><a href="/html/gasthamnen.html">Gästplatser</a></li>
+            <li><a href="/html/aktiviteter-djupviken.html">Aktiviteter</a></li>
+            <li><a href="/html/historia.html">Historia</a></li>
+            <li><a href="/html/foreningen.html">Föreningen</a></li>
+            <li><a href="/html/kontakta-oss.html">Kontakta oss</a></li>
+          </ul>
+        </nav>
       </header>
-      <nav>
-        <ul>
-          <li><a href="/index.html">Hem</a></li>
-          <li><a href="/html/gasthamnen.html">Gästplatser</a></li>
-          <li><a href="/html/aktiviteter-djupviken.html">Aktiviteter</a></li>
-          <li><a href="/html/historia.html">Historia</a></li>
-          <li><a href="/html/foreningen.html">Föreningen</a></li>
-          <li><a href="/html/kontakta-oss.html">Kontakta oss</a></li>
-        </ul>
-      </nav>
       <main>
         <section id="activities">
           <h2>TURISTMÅL I NÄRHETEN</h2>

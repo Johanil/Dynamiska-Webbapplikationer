@@ -18,14 +18,109 @@
     height: calc(100vh- 14em);
   }
   #about {
-    height: 100vh;
-    width: 100vw;
+    height: 65%;
     scroll-snap-align: start;
-    background-color: green;
+  }
+  #about h2 {
+  }
+  #nav {
+    height: 25%;
+    width: 100%;
+  }
+  #footer {
+    height: 10%;
   }
   #weather {
   }
-  header {
+
+  #news {
+    border-radius: 1em;
+    padding: 0.5em;
+    margin: 0.5em;
+    display: grid;
+  }
+  .parent {
+    width: 100%;
+    scroll-snap-type: y mandatory;
+    flex-basis: 50%;
+    max-height: 50vh;
+    scroll-snap-stop: always;
+    overflow-y: scroll;
+  }
+  .child {
+    padding: 0.5rem;
+    color: rgba(white, 0.5);
+    background: lightgray;
+    font-size: medium;
+    text-align: center;
+    margin-top: 0.7rem;
+    scroll-snap-align: start;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+    align-items: center;
+  }
+  nav ul li {
+    list-style-type: none;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-size: medium;
+    font-weight: 600;
+  }
+  .moreText {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
+  }
+  .read-more-btn {
+  }
+  .textbox {
+    position: relative;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  #hamburger {
+    cursor: pointer;
+    margin: 0em;
+  }
+  .nav_toggle {
+    width: 8%;
+  }
+
+  #close {
+    display: none;
+  }
+  #nav_checkbox,
+  #nav_en {
+    display: none;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+  .nav_menu {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+  }
+  #header-top {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    justify-content: space-between;
     background: linear-gradient(
       to bottom,
       hsla(42.63, 41.3%, 81.96%, 0.13) 0%,
@@ -47,15 +142,13 @@
     );
   }
   header h1 {
-    font-family: 'Permanent Marker', cursive;
+    font-family: "Permanent Marker", cursive;
     text-align: center;
     font-size: xx-large;
-    margin-top: 0.5em;
+    margin-top: 0%;
   }
-  #news {
-    border-radius: 1em;
-    padding: 0.5em;
-    margin: 0.5em;
-    display: grid;
+  #globe {
+    cursor: pointer;
+    margin: 0em;
   }
 }
