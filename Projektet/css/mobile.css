@@ -1,6 +1,10 @@
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   html {
   }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
   main {
     display: flex;
     flex-direction: column;
@@ -12,6 +16,7 @@
     font-size: large;
     font-family: "Roboto", sans-serif;
     margin: 0%;
+    overflow-x: hidden;
   }
   section {
     scroll-snap-align: start;
@@ -30,6 +35,15 @@
   #footer {
     height: 10%;
   }
+  #footer nav ul {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+  }
   #weather {
   }
 
@@ -43,9 +57,8 @@
     width: 100%;
     scroll-snap-type: y mandatory;
     flex-basis: 50%;
-    max-height: 50vh;
     scroll-snap-stop: always;
-    overflow-y: scroll;
+    overflow-y: hidden;
   }
   .child {
     padding: 0.5rem;
@@ -108,14 +121,20 @@
     justify-content: center;
   }
   .nav_menu {
-    width: 75%;
-    display: flex;
+    width: 100%;
     flex-direction: column;
     gap: 2em;
     align-items: center;
-    justify-content: flex-end;
     padding: 0;
+    display: none;
   }
+  .nav-active {
+    display: block;
+  }
+  .nav_menu ul {
+    padding: 0%;
+  }
+
   #header-top {
     display: flex;
     align-items: center;
@@ -147,10 +166,36 @@
     font-size: xx-large;
     margin-top: 0%;
   }
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   #english {
     cursor: pointer;
     margin: 0em;
     height: 100%;
     width: 100%;
+  }
+  .burgerBars div {
+    width: 1.6em;
+    height: 0.3em;
+    background-color: rgb(0, 0, 0);
+    margin: 0.3em;
+  }
+  .burgerBars {
+    display: block;
+  }
+  .burgerBars:hover {
+    cursor: pointer;
+  }
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
