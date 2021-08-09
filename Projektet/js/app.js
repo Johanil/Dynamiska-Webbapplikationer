@@ -31,10 +31,10 @@ const scrollToTop = () => {
 };
 
 function showMoreText() {
-  const moretext = document.getElementsByName("moreText");
-  const moreTextBtn = document.getElementsByName(".read-more-btn");
-    moreTextBtn.addEventListener("click", () => {
-      
-    });
-};
+  const content = document.querySelector(".moreText");
+  const moreTextBtn = document.getElementById("read-more-btn");
+  moreTextBtn.addEventListener("click", () => {
+    content.classList.toggle("moreText-active");
+  });
+}
 app();
