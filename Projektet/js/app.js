@@ -9,7 +9,7 @@ const slidingNav = () => {
   const nav = document.querySelector(".nav_menu");
 
   burgerBars.addEventListener("click", () => {
-    nav.classList.toggle("nav-active");
+      nav.classList.toggle("nav-active");
   });
 };
 slidingNav();
