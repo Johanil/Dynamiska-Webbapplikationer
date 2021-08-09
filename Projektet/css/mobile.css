@@ -5,6 +5,7 @@
   .container {
     display: flex;
     flex-direction: column;
+    background-color: rgba(253, 232, 200, 0.699);
   }
   main {
     display: flex;
@@ -27,13 +28,13 @@
     display: flex;
     height: 100vh;
     width: auto;
-justify-content: center;
+    justify-content: center;
   }
   #about {
     display: flex;
     flex-direction: column;
     scroll-snap-align: start;
-    margin: 1em;
+    margin: 0.5em;
   }
   #about h2 {
     margin: 0.5em;
@@ -75,14 +76,15 @@ justify-content: center;
   .child {
     padding: 0.5rem;
     color: rgba(white, 0.5);
-    background: lightgray;
+    background: rgba(243, 179, 2, 0.486);
     font-size: medium;
     text-align: center;
-    margin-top: 0.7rem;
+    margin-top: 0.5rem;
     scroll-snap-align: start;
     display: flex;
     flex-flow: column;
     justify-content: center;
+    border-radius: 0.5em;
   }
   nav ul {
     display: flex;
@@ -166,6 +168,8 @@ justify-content: center;
     position: fixed;
     margin-top: 4.14em;
     opacity: 0;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
   }
   .nav-active {
     display: block;
