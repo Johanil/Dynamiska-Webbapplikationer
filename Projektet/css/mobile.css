@@ -29,6 +29,32 @@
     height: 100vh;
     width: auto;
     justify-content: center;
+    overflow-x: hidden;
+  }
+  .textOverlay {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .textOverlay p {
+    border-radius: 0.5em;
+    padding: 1em;
+    margin: 0em;
+    text-align: center;
+    height: 36%;
+    position: absolute;
+    background: rgb(255, 218, 54);
+    background: linear-gradient(
+      0deg,
+      rgb(168, 159, 116) 0%,
+      rgba(190, 127, 25, 0.021) 100%
+    );
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 91%;
+    font-size: large;
+    color: rgb(3, 3, 3);
   }
   #about {
     display: flex;
