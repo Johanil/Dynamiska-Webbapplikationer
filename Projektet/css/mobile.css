@@ -23,6 +23,9 @@
     scroll-snap-align: start;
     height: calc(100vh- 14em);
   }
+  #img-background {
+    width: 100%;
+  }
   #about {
     display: flex;
     flex-direction: column;
@@ -157,41 +160,31 @@
     transform: translateY(-130%);
     transition: transform 0.5s ease-in;
     display: none;
+    position: fixed;
+    margin-top: 4.14em;
     opacity: 0;
   }
   .nav-active {
     display: block;
     transform: translateY(0%);
+    background-color: rgba(255, 181, 8, 0.733);
     opacity: 1;
   }
   .nav_menu ul {
     padding: 0%;
   }
 
-  #header-top {
+  .header-top {
     display: flex;
     align-items: center;
     padding: 0.5em;
     justify-content: space-between;
-    background: linear-gradient(
-      to bottom,
-      hsla(42.63, 41.3%, 81.96%, 0.13) 0%,
-      hsla(42.64, 39.11%, 81.3%, 0.146) 10.6%,
-      hsla(42.67, 34.71%, 79.82%, 0.18) 20.2%,
-      hsla(42.72, 29.19%, 77.61%, 0.231) 28.8%,
-      hsla(42.8, 23.42%, 74.73%, 0.294) 36.6%,
-      hsla(42.96, 17.91%, 71.26%, 0.367) 43.7%,
-      hsla(43.24, 12.9%, 67.23%, 0.448) 50.2%,
-      hsla(43.88, 8.44%, 62.72%, 0.532) 56.2%,
-      hsla(45.76, 4.48%, 57.78%, 0.618) 61.8%,
-      hsla(62.93, 0.97%, 52.48%, 0.701) 67.1%,
-      hsla(211.36, 2.65%, 46.85%, 0.78) 72.3%,
-      hsla(215.59, 7.8%, 41.05%, 0.851) 77.5%,
-      hsla(215.73, 15.64%, 35.19%, 0.912) 82.7%,
-      hsla(214.45, 27.76%, 29.52%, 0.959) 88.1%,
-      hsla(211.98, 45.41%, 24.52%, 0.989) 93.8%,
-      hsl(210, 58.93%, 21.96%) 100%
-    );
+    z-index: 1;
+    position: fixed;
+    top: 0;
+  }
+  .header-top-active {
+    background-color: rgba(255, 181, 8, 0.733);
   }
   header h1 {
     font-family: "Permanent Marker", cursive;

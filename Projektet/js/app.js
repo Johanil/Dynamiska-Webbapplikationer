@@ -7,15 +7,17 @@ function app() {
   slidingNav();
   scrollToTop();
   showMoreText();
+  hideMenu();
   window.addEventListener("load", init);
 }
 
 const slidingNav = () => {
   const burgerBars = document.querySelector(".burgerBars");
   const nav = document.querySelector(".nav_menu");
-
+  const headertop = document.querySelector(".header-top");
   burgerBars.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
+    headertop.classList.toggle("header-top-active");
     burgerBars.classList.toggle("toggle");
   });
 };
@@ -27,6 +29,19 @@ const scrollToTop = () => {
       left: 0,
       behavior: "smooth",
     });
+  });
+};
+const hideMenu = () => {
+  var lastScrollTop = 0;
+  navbar = document.querySelector(".nav_menu");
+  window.addEventListener("scroll", function () {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+      navbar.style.top = "-10em";
+    } else {
+      navbar.style.top = "0em";
+    }
+    lastScrollTop = scrollTop;
   });
 };
 
