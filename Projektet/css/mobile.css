@@ -5,7 +5,7 @@
   .container {
     display: flex;
     flex-direction: column;
-    background-color: rgba(253, 232, 200, 0.699);
+    background-color: rgb(244 231 220);
   }
   main {
     display: flex;
@@ -35,6 +35,15 @@
     position: relative;
     text-align: center;
     color: white;
+  }
+  .textOverlay h2 {
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+    font-size: 3.2em;
+    position: absolute;
+    width: 100%;
+    top: 10%;
+    color: black;
   }
   .textOverlay p {
     border-radius: 0.5em;
@@ -99,10 +108,13 @@
     scroll-snap-stop: always;
     overflow-y: hidden;
   }
+  .scroll-active {
+    display: none;
+  }
   .child {
     padding: 0.5rem;
     color: rgba(white, 0.5);
-    background: rgba(243, 179, 2, 0.486);
+    background: rgb(205 183 165);
     font-size: medium;
     text-align: center;
     margin-top: 0.5rem;
