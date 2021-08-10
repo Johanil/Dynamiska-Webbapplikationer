@@ -11,7 +11,7 @@
   .container {
     display: flex;
     flex-direction: column;
-    background-color: rgb(244 231 220);
+    background-color: rgb(244, 231, 220);
   }
   main {
     display: flex;
@@ -29,7 +29,7 @@
   section {
     scroll-snap-align: start;
   }
-  #img-background {
+  .background {
     display: flex;
     height: 100vh;
     width: auto;
@@ -39,7 +39,7 @@
   .textOverlay {
     position: relative;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
   }
   .textOverlay h2 {
     font-family: "Permanent Marker", cursive;
@@ -50,8 +50,12 @@
     top: 10%;
     color: black;
   }
+  #gasthamn{
+    color:rgb(164, 231, 252);
+    font-size: xxx-large;
+  }
   #weather {
-    height: 35em;
+    height: 100%;
     margin-top: 5em;
   }
   #weather h2 {
@@ -74,7 +78,7 @@
     background-color: white;
     border-radius: 0.5em;
   }
-    .weather-cards table {
+  .weather-cards table {
     width: 95%;
     padding: 0.5em;
   }
@@ -252,11 +256,10 @@
     gap: 2em;
     align-items: center;
     padding: 0;
-
     transition: 0.8s;
     display: block;
     position: fixed;
-    margin-top: 4.14em;
+    margin-top: 4em;
     z-index: 1;
     opacity: 0;
     background-color: rgb(245, 171, 73);
@@ -281,6 +284,7 @@
   .header-top {
     display: flex;
     align-items: center;
+    height: 3em;
     padding: 0.5em;
     justify-content: space-between;
     z-index: 2;
@@ -289,7 +293,7 @@
     background-color: rgb(245, 171, 73);
   }
 
-  header h1 {
+  h1 {
     font-family: "Permanent Marker", cursive;
     text-align: center;
     font-size: xx-large;

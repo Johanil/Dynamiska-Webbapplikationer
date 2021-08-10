@@ -7,7 +7,7 @@ export default async function displayWeatherdata() {
 
 function addWeatherData(data) {
   let table = document.querySelector("#weather-today");
-
+  console.log(data);
   data.timeSeries.forEach((forecast) => {
     let windDirection = "";
     let temperature = "";
@@ -18,8 +18,10 @@ function addWeatherData(data) {
     let date = datetime.getDate();
     let acceptableUTCHours = [4, 10, 16];
     let td = document.createElement("td");
-    forecast.parameters.map((p) => {
-      if (acceptableUTCHours.includes(datetimeHours)) {
+    if (acceptableUTCHours.includes(datetimeHours)) {
+      console.log(datetime);
+      console.log(datetimeHours);
+      forecast.parameters.map((p) => {
         let tr = document.createElement("tr");
         if (p.name == "wd") {
           windDirection = p.values.toString();
@@ -42,9 +44,8 @@ function addWeatherData(data) {
           weatherStatus
         );
         tr.appendChild(td);
-      }
-      console.log(date + "   " + datetimeHours);
-    });
+      });
+    }
   });
 }
 
