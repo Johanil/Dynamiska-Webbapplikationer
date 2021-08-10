@@ -22,7 +22,7 @@
   }
   section {
     scroll-snap-align: start;
-    height: calc(100vh- 14em);
+    
   }
   #img-background {
     display: flex;
@@ -113,7 +113,7 @@
   }
   .child {
     padding: 0.5rem;
-    color: rgba(white, 0.5);
+    color: rgba(rgb(255, 255, 255), 0.5);
     background: rgb(205 183 165);
     font-size: medium;
     text-align: center;
