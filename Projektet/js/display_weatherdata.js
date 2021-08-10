@@ -6,10 +6,9 @@ export default async function displayWeatherdata() {
 }
 
 function addWeatherData(data) {
-  let weatherSection = document.getElementById("weather");
+  let table = document.querySelector("#weather-today");
 
   data.timeSeries.forEach((forecast) => {
-    let weatherArticle = document.createElement("ARTICLE");
     let windDirection = "";
     let temperature = "";
     let windStrength = "";
@@ -18,8 +17,10 @@ function addWeatherData(data) {
     let datetimeHours = datetime.getHours();
     let date = datetime.getDate();
     let acceptableUTCHours = [4, 10, 16];
+    let td = document.createElement("td");
     forecast.parameters.map((p) => {
       if (acceptableUTCHours.includes(datetimeHours)) {
+        let tr = document.createElement("tr");
         if (p.name == "wd") {
           windDirection = p.values.toString();
         }
@@ -30,9 +31,9 @@ function addWeatherData(data) {
           windStrength = p.values.toString();
         }
         if (p.name == "Wsymb2") {
-          weatherStatus = p.values.toString();
+          weatherStatus = p.values[0].toString();
         }
-        weatherArticle.innerHTML = addForecast(
+        td.innerHTML = addForecast(
           date,
           datetimeHours,
           windDirection,
@@ -40,10 +41,10 @@ function addWeatherData(data) {
           windStrength,
           weatherStatus
         );
+        tr.appendChild(td);
       }
+      console.log(date + "   " + datetimeHours);
     });
-
-    weatherSection.appendChild(weatherArticle);
   });
 }
 
@@ -55,17 +56,87 @@ function addForecast(
   windStrength,
   weatherStatus
 ) {
-  return (
-    date +
-    " " +
-    (datetime + 2).toString() +
-    " " +
-    temperature +
-    "C " +
-    windStrength +
-    "m/s " +
-    windDirection +
-    "d  " +
-    weatherStatus
-  );
+  var html = "<td>" + windDirection + "</td>";
+  // <td>` +
+  // windStrength +
+  // `</td>
+  // <td>` +
+  // temperature +
+  // `</td>
+  // <td>` +
+  // interpretSymbol(weatherStatus) +
+  // `</td>`;
+
+  // date +
+  // " " +
+  // (datetime + 2).toString() +
+  // " " +
+  // temperature +
+  // "C " +
+  // windStrength +
+  // "m/s " +
+  // windDirection +
+  // "d  " +
+
+  return html;
+}
+function interpretSymbol(number) {
+  switch (number) {
+    case 1:
+      return "Klart";
+    case 2:
+      return "Nästan klart";
+    case 3:
+      return "Lätt molnighet";
+    case 4:
+      return "Halvklart";
+    case 5:
+      return "Molnigt";
+    case 6:
+      return "Mycket moln";
+    case 7:
+      return "Mulet";
+    case 8:
+      return "Dimma";
+    case 9:
+      return "Lätt regnskur";
+    case 10:
+      return "Regnskur";
+    case 11:
+      return "Kraftig regnskur";
+    case 12:
+      return "Åskskur";
+    case 13:
+      return "Lätt by av regn och snö";
+    case 14:
+      return "By av regn och snö";
+    case 15:
+      return "Kraftig by av regn och snö";
+    case 16:
+      return "Lätt snöby";
+    case 17:
+      return "Snöby";
+    case 18:
+      return "Kraftig snöby";
+    case 19:
+      return "Lätt regn";
+    case 20:
+      return "Regn";
+    case 21:
+      return "Kraftigt regn";
+    case 22:
+      return "Lätt snöblandat regn";
+    case 23:
+      return "Snöblandat regn";
+    case 24:
+      return "Kraftigt snöblandat regn";
+    case 25:
+      return "Lätt snöfall";
+    case 26:
+      return "Snöfall";
+    case 27:
+      return "Ymnigt snöfall";
+    default:
+      break;
+  }
 }

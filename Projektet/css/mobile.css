@@ -2,6 +2,12 @@
   html {
     scroll-behavior: smooth;
   }
+  article,
+  section,
+  aside {
+    padding: 0.5em;
+    margin: 1em;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -44,6 +50,52 @@
     top: 10%;
     color: black;
   }
+  #weather {
+    height: 35em;
+    margin-top: 5em;
+  }
+  #weather h2 {
+    margin: 0;
+  }
+  .weather-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+  .weather-cards div {
+    margin: 1em;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background-color: white;
+    border-radius: 0.5em;
+  }
+    .weather-cards table {
+    width: 95%;
+    padding: 0.5em;
+  }
+  .weather-cards tr {
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    width: 100%;
+  }
+  .weather-cards tr td {
+    display: block;
+    padding-top: 0.5em;
+    background-color: grey;
+  }
+  .weather-cards ul li:last-child {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .weather-cards p {
+    color: black;
+  }
   .textOverlay p {
     border-radius: 0.5em;
     padding: 1em;
@@ -51,24 +103,23 @@
     text-align: center;
     height: 36%;
     position: absolute;
-    background: rgb(255, 218, 54);
     background: linear-gradient(
       0deg,
-      rgb(168, 159, 116) 0%,
-      rgba(190, 127, 25, 0.021) 100%
+      rgba(250, 250, 250, 0.897) 0%,
+      rgba(231, 222, 222, 0.199) 99%
     );
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 91%;
+    width: 95%;
     font-size: large;
-    color: rgb(3, 3, 3);
+    color: rgb(0, 0, 0);
   }
   #about {
     display: flex;
     flex-direction: column;
     scroll-snap-align: start;
-    margin: 0.5em;
+    margin: 1.5em;
   }
   #about h2 {
     margin: 0.5em;
@@ -111,8 +162,6 @@
     display: none;
   }
   .child {
-    padding: 0.5rem;
-    
     background: rgb(205, 183, 165);
     font-size: medium;
     text-align: center;
@@ -122,6 +171,10 @@
     flex-flow: column;
     justify-content: center;
     border-radius: 0.5em;
+  }
+  .child img {
+    width: 95%;
+    padding: 0.5em;
   }
   nav ul {
     display: flex;

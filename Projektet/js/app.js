@@ -1,4 +1,4 @@
-import displayWeatherdata from "./display_weatherdata.js";
+import displayWeatherdata from "../js/display_weatherdata.js";
 
 function init() {
   displayWeatherdata();
@@ -7,9 +7,8 @@ function init() {
 function app() {
   slidingNav();
   scrollToTop();
-  showMoreText();
-  hideMenu();
-  window.addEventListener("load", init);
+  scrollHide();
+  displayWeatherdata();
 }
 
 const slidingNav = () => {
@@ -46,7 +45,7 @@ function hide(boolean) {
   }
 }
 
-const hideMenu = () => {
+const scrollHide = () => {
   var lastScrollTop = 0;
   const navbar = document.querySelector(".header-top");
   const navmenu = document.querySelector(".nav_menu");
@@ -60,17 +59,6 @@ const hideMenu = () => {
     lastScrollTop = scrollTop;
   });
 };
-
-function showMoreText() {
-  const content = document.querySelector(".moreText");
-  const moreTextBtn = document.getElementById("read-more-btn");
-  moreTextBtn.addEventListener("click", () => {
-    content.classList.toggle("moreText-active");
-    if (moreTextBtn.innerHTML == "Läs mer") {
-      moreTextBtn.innerHTML = "Läs mindre";
-    } else {
-      moreTextBtn.innerHTML = "Läs mer";
-    }
-  });
-}
 app();
+window.addEventListener("load", init);
+
