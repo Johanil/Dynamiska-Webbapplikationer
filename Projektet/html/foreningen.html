@@ -9,25 +9,48 @@
     />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/normalize.css" />
-    <link rel="shortcut icon" href="" type="image/png" />
+    <script src="../js/app.js" type="module"></script>
   </head>
   <body>
     <div id="container">
-      <header>
+<header>
+      <div class="header-top">
+        <input type="button" id="nav_en" />
+        <label for="nav_en" class="nav_toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="1200" height="600" id="english">
+            <clipPath id="s">
+              <path d="M0,0 v30 h60 v-30 z" />
+            </clipPath>
+            <clipPath id="t">
+              <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z" />
+            </clipPath>
+            <g clip-path="url(#s)">
+              <path d="M0,0 v30 h60 v-30 z" fill="#012169" />
+              <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6" />
+              <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4" />
+              <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10" />
+              <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6" />
+            </g>
+          </svg>
+        </label>
         <h1><a href="/index.html">Djupvik</a></h1>
-        <hr />
-      </header>
-      <nav>
+        <div class="burgerBars">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+      <nav class="nav_menu">
         <ul>
-          <li><a href="/index.html">Hem</a></li>
           <li><a href="/html/gasthamnen.html">Gästplatser</a></li>
-          <li><a href="/html/aktiviteter-djupviken.html">Aktiviteter</a></li>
+          <li><a href="/html/aktiviteter-djupvik.html">Aktiviteter</a></li>
           <li><a href="/html/historia.html">Historia</a></li>
           <li><a href="/html/foreningen.html">Föreningen</a></li>
           <li><a href="/html/kontakta-oss.html">Kontakta oss</a></li>
         </ul>
       </nav>
-      <main>
+    </header>
+      <main class="parent">
         <section id="current-events">
           <article id="happenings"></article>
           <article id="protocol"></article>
@@ -76,6 +99,11 @@
             </tr>
           </table>
         </section>
+              <aside class="child">
+        <a>
+          <href>Tillbaka till toppen</href>
+        </a>
+      </aside>
       </main>
       <footer>
         <hr />
