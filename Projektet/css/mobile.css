@@ -22,7 +22,6 @@
   }
   section {
     scroll-snap-align: start;
-    
   }
   #img-background {
     display: flex;
@@ -113,8 +112,8 @@
   }
   .child {
     padding: 0.5rem;
-    color: rgba(rgb(255, 255, 255), 0.5);
-    background: rgb(205 183 165);
+    
+    background: rgb(205, 183, 165);
     font-size: medium;
     text-align: center;
     margin-top: 0.5rem;
@@ -200,12 +199,13 @@
     gap: 2em;
     align-items: center;
     padding: 0;
-    transform: translateY(-140%);
-    transition: transform 0.5s ease-in;
+
+    transition: 0.8s;
     display: block;
     position: fixed;
     margin-top: 4.14em;
     z-index: 1;
+    opacity: 0;
     background-color: rgb(245, 171, 73);
     border-bottom-left-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
@@ -218,7 +218,10 @@
   }
   .nav_menu ul {
     padding: 0%;
-    transition:  0.8s;
+    transition: 1.8s;
+    opacity: 0;
+  }
+  .nav-active ul {
     opacity: 1;
   }
 
@@ -230,12 +233,9 @@
     z-index: 2;
     position: fixed;
     transition: 0.8s;
-    top: 0;
     background-color: rgb(245, 171, 73);
   }
-  .header-top-active {
-    background-color: rgb(245, 171, 73);
-  }
+
   header h1 {
     font-family: "Permanent Marker", cursive;
     text-align: center;
@@ -277,11 +277,9 @@
     transform: translatex(10%);
   }
   .toggle .line2 {
-    /* transform: rotate(45deg) translate(15%, -5%); */
     transform: translatex(-20%);
   }
   .toggle .line3 {
-    /* transform: rotate(-45deg) translate(25%, -70%); */
     transform: translatex(10%);
   }
 }
