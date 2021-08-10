@@ -200,23 +200,26 @@
     gap: 2em;
     align-items: center;
     padding: 0;
-    transform: translateY(-130%);
+    transform: translateY(-140%);
     transition: transform 0.5s ease-in;
-    display: none;
+    display: block;
     position: fixed;
     margin-top: 4.14em;
-    opacity: 0;
+    z-index: 1;
+    background-color: rgb(245, 171, 73);
     border-bottom-left-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
   }
   .nav-active {
     display: block;
     transform: translateY(0%);
-    background-color: rgba(255, 181, 8, 0.904);
+    background-color: rgb(245, 171, 73);
     opacity: 1;
   }
   .nav_menu ul {
     padding: 0%;
+    transition:  0.8s;
+    opacity: 1;
   }
 
   .header-top {
@@ -224,12 +227,14 @@
     align-items: center;
     padding: 0.5em;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 2;
     position: fixed;
+    transition: 0.8s;
     top: 0;
+    background-color: rgb(245, 171, 73);
   }
   .header-top-active {
-    background-color: rgba(255, 181, 8, 0.904);
+    background-color: rgb(245, 171, 73);
   }
   header h1 {
     font-family: "Permanent Marker", cursive;
