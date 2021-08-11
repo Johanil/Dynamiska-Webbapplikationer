@@ -1,7 +1,6 @@
 import displayWeatherdata from "../js/display_weatherdata.js";
 
 function init() {
-  displayWeatherdata();
   hide(true);
 }
 function app() {

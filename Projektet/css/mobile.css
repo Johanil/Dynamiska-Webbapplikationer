@@ -39,6 +39,7 @@
   .textOverlay {
     position: relative;
     text-align: center;
+    display: flex;
     color: rgb(255, 255, 255);
   }
   .textOverlay h2 {
@@ -56,68 +57,27 @@
     font-size: xxx-large;
     padding-top: 2em;
   }
-  #weather {
-    height: 100%;
-    margin-top: 5em;
-  }
-  #weather h2 {
-    margin: 0;
-  }
-  .weather-cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
-  }
-  .weather-cards div {
-    margin: 1em;
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    background-color: white;
-    border-radius: 0.5em;
-  }
-  .weather-cards table {
-    width: 95%;
-    padding: 0.5em;
-  }
-  .weather-cards tr {
-    display: flex;
-    align-items: stretch; /* Default */
-    justify-content: space-between;
-    width: 100%;
-  }
-  .weather-cards tr td {
-    display: block;
-    padding-top: 0.5em;
-    background-color: grey;
-  }
-  .weather-cards ul li:last-child {
-    margin-right: 0;
-    padding-right: 0;
-  }
-  .weather-cards p {
-    color: black;
-  }
+
+
+
   .textOverlay p {
     border-radius: 0.5em;
     padding: 1em;
-    margin: 0em;
+    margin: 1em;
+    display: flex;
     text-align: center;
     height: 36%;
     position: absolute;
+    border-radius: 0;
     background: linear-gradient(
       0deg,
       rgba(250, 250, 250, 0.897) 0%,
       rgba(231, 222, 222, 0.199) 99%
     );
-    top: 80%;
+    top: 77.5%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 95%;
+    width: 75%;
     font-size: large;
     color: rgb(0, 0, 0);
   }
@@ -148,8 +108,6 @@
     background-color: rgba(245, 171, 73, 0.267);
     padding: 1em;
   }
-  #weather {
-  }
 
   #news {
     border-radius: 1em;
@@ -161,6 +119,8 @@
     width: 100%;
     scroll-snap-type: y mandatory;
     flex-basis: 50%;
+    display: flex;
+    align-items: center;
     scroll-snap-stop: always;
     overflow-y: hidden;
   }
@@ -340,5 +300,49 @@
   }
   .toggle .line3 {
     transform: translatex(10%);
+  }
+  #harbour {
+    display: flex;
+    width: 90%;
+    margin:0.5em;
+    padding:1em;
+  }
+  #harbour div {
+    justify-content: flex-start;
+  }
+  #harbour ul {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+  }
+    #harbour li {
+    text-align: center;
+  }
+  #harbour li:last-child {
+    padding-top: 1em;
+    text-align: left;
+  }
+  #harbour p {
+    text-align: left;
+  }
+    #harbour {
+    margin: 1em;
+  }
+  #activities{
+    flex-direction: column;
+    justify-content: center;
+    margin:0;
+    padding:0;
+  }
+    #activities article{
+    width: auto;
+  }
+    #gasthamn-div p {
+    height: 25%;
+    top: 83%;
+    color: rgb(167, 57, 14);
+    background: linear-gradient(0deg, #f8a066 0%, rgba(245, 237, 237, 0) 75%);
+    font-size: large;
+    font-weight:bold;
   }
 }

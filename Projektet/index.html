@@ -1,164 +1,146 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <title>Djupvik</title>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width = device-width, initial-scale = 1, maximum-scale = 2"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <script src="./js/app.js" type="module"></script>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <div class="header-top">
-          <input type="button" id="nav_en" />
-          <label for="nav_en" class="nav_toggle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 60 30"
-              width="1200"
-              height="600"
-              id="english"
-            >
-              <clipPath id="s">
-                <path d="M0,0 v30 h60 v-30 z" />
-              </clipPath>
-              <clipPath id="t">
-                <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z" />
-              </clipPath>
-              <g clip-path="url(#s)">
-                <path d="M0,0 v30 h60 v-30 z" fill="#012169" />
-                <path
-                  d="M0,0 L60,30 M60,0 L0,30"
-                  stroke="#fff"
-                  stroke-width="6"
-                />
-                <path
-                  d="M0,0 L60,30 M60,0 L0,30"
-                  clip-path="url(#t)"
-                  stroke="#C8102E"
-                  stroke-width="4"
-                />
-                <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10" />
-                <path
-                  d="M30,0 v30 M0,15 h60"
-                  stroke="#C8102E"
-                  stroke-width="6"
-                />
-              </g>
-            </svg>
-          </label>
-          <h1><a href="/index.html">Djupvik</a></h1>
-          <div class="burgerBars">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
+
+<head>
+  <title>Djupvik</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width = device-width, initial-scale = 1, maximum-scale = 2" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <script src="./js/app.js" type="module"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <input type="button" id="nav_en" />
+        <label for="nav_en" class="nav_toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="1200" height="600" id="english">
+            <clipPath id="s">
+              <path d="M0,0 v30 h60 v-30 z" />
+            </clipPath>
+            <clipPath id="t">
+              <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z" />
+            </clipPath>
+            <g clip-path="url(#s)">
+              <path d="M0,0 v30 h60 v-30 z" fill="#012169" />
+              <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6" />
+              <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4" />
+              <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10" />
+              <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6" />
+            </g>
+          </svg>
+        </label>
+        <h1><a href="/index.html">Djupvik</a></h1>
+        <div class="burgerBars">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
-        <nav class="nav_menu">
-          <ul>
-            <li><a href="/html/gasthamnen.html">Gästplatser</a></li>
-            <li><a href="/html/aktiviteter-djupvik.html">Aktiviteter</a></li>
-            <li><a href="/html/historia.html">Historia</a></li>
-            <li><a href="/html/foreningen.html">Föreningen</a></li>
-            <li><a href="/html/kontakta-oss.html">Kontakta oss</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main class="parent">
-        <div class="textOverlay">
-          <picture class="background">
-            <img src="images/D-9-small-4.jpg" />
-          </picture>
-          <h2>Djupvik</h2>
-          <p class=".textOverlay-p">
-            Djupviks hamn ligger på Gotlands västkust nästan rakt öster om Lilla
-            Karlsö. Hamnen är otroligt vackert belägen i anslutning till ett
-            gammalt Gotländskt fiskeläge bestående av fiskebodar från sent
+      </div>
+      <nav class="nav_menu">
+        <ul>
+          <li><a href="/html/gasthamnen.html">Gästplatser</a></li>
+          <li><a href="/html/aktiviteter-djupvik.html">Aktiviteter</a></li>
+          <li><a href="/html/historia.html">Historia</a></li>
+          <li><a href="/html/foreningen.html">Föreningen</a></li>
+          <li><a href="/html/kontakta-oss.html">Kontakta oss</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="parent">
+      <div class="textOverlay">
+        <picture class="background">
+          <img src="images/D-9-small-4.jpg" />
+        </picture>
+        <h2>Djupvik</h2>
+        <p class=".textOverlay-p">
+          Djupviks hamn ligger på Gotlands västkust nästan rakt öster om Lilla
+          Karlsö. Hamnen är otroligt vackert belägen i anslutning till ett
+          gammalt Gotländskt fiskeläge bestående av fiskebodar från sent
+          1800-tal.
+        </p>
+      </div>
+      <article id="about" class="child">
+        <h2>Övergripande info</h2>
+        <div class="textbox">
+          <p class="smallText">
+            Djupviks hamn ligger på Gotlands västkust nästan rakt öster om
+            Lilla Karlsö. Hamnen är otroligt vackert belägen i anslutning till
+            ett gammalt Gotländskt fiskeläge bestående av fiskebodar från sent
             1800-tal.
           </p>
+          <span class="moreText">
+            Husen är grupperade i tre rader, mellan dem ligger gistgarden där
+            man torkar nät och närmast stranden ligger båthusen. Från
+            fiskeläget har man fri utsikt mot de båda Karlsöarna. Ansvaret för
+            hamnen och fiskeläget har Djupviks hamnförening, som är en ideell
+            förening som aktivt verkar för att bibehålla och utveckla Djupvik
+            som fiskehamn och som fritidsbåtshamn för de många närboende och
+            sommarboende. Föreningen driver en glasskiosk och kaffeservering
+            på sommartid i ett gammalt båthus vid hamnen. Ett par hundra meter
+            ovanför hamnen ligger Djupviks Hotell, ett hotell med restaurang
+            och bra standard. Det finns även toaletter i hamnen varav en som
+            är tillgänglighetsanpassad för rullstolar och rollatorer.</span>
+          <div id="read-more-btn">Läs mer</div>
         </div>
-        <article id="about" class="child">
-          <h2>Övergripande info</h2>
-          <div class="textbox">
-            <p class="smallText">
-              Djupviks hamn ligger på Gotlands västkust nästan rakt öster om
-              Lilla Karlsö. Hamnen är otroligt vackert belägen i anslutning till
-              ett gammalt Gotländskt fiskeläge bestående av fiskebodar från sent
-              1800-tal.
-            </p>
-            <span class="moreText">
-              Husen är grupperade i tre rader, mellan dem ligger gistgarden där
-              man torkar nät och närmast stranden ligger båthusen. Från
-              fiskeläget har man fri utsikt mot de båda Karlsöarna. Ansvaret för
-              hamnen och fiskeläget har Djupviks hamnförening, som är en ideell
-              förening som aktivt verkar för att bibehålla och utveckla Djupvik
-              som fiskehamn och som fritidsbåtshamn för de många närboende och
-              sommarboende. Föreningen driver en glasskiosk och kaffeservering
-              på sommartid i ett gammalt båthus vid hamnen. Ett par hundra meter
-              ovanför hamnen ligger Djupviks Hotell, ett hotell med restaurang
-              och bra standard. Det finns även toaletter i hamnen varav en som
-              är tillgänglighetsanpassad för rullstolar och rollatorer.</span
-            >
-            <div id="read-more-btn">Läs mer</div>
-          </div>
+      </article>
+      <section id="news">
+        <h2>Senaste nytt</h2>
+        <article class="child">
+          <h3>Hamnjobb</h3>
+          <time>2019-04-06</time>
+          <p>
+            Lördagen den 6 april samlades ett antal av föreningens medlemmar
+            för arbete i hamnen. Kiosken, kajerna och stranden städades. Kajer
+            lagades och gräs brändes. Diverse fix på många håll. Vädret var
+            bra och korven god. Det som återstår inför säsongen är att ta bort
+            släke från stranden, att sätta upp ramp vid kiosken och att fylla
+            kiosken med varor.
+          </p>
         </article>
-        <section id="news">
-          <h2>Senaste nytt</h2>
-          <article class="child">
-            <h3>Hamnjobb</h3>
-            <time>2019-04-06</time>
-            <p>
-              Lördagen den 6 april samlades ett antal av föreningens medlemmar
-              för arbete i hamnen. Kiosken, kajerna och stranden städades. Kajer
-              lagades och gräs brändes. Diverse fix på många håll. Vädret var
-              bra och korven god. Det som återstår inför säsongen är att ta bort
-              släke från stranden, att sätta upp ramp vid kiosken och att fylla
-              kiosken med varor.
-            </p>
-          </article>
-          <article class="child">
-            <h3>Succé för hamnens dag!</h3>
-            <time>2018-07-16</time>
-            <p>
-              Lördagen den 16 juli arrangerade föreningen Djupviks hamn i Eksta
-              ”Hamnens dag” i Djupvik. Vårt arbete har med åren alltmer också
-              inriktats på att alla besökare, även de som kommer landvägen skall
-              trivas i det vackra hamnområdet. Nu bjöds det in till ”Hamnens
-              dag”. På plats fanns sjöfartsverkets SAR-helikopter,
-              Sjöräddningens båt Hwitstjärna, släckningsbil från
-              räddningstjänsten i Klintehamn, russ från Gannarve och ett antal
-              loppisförsäljare. Aktiviteten lockade ett stort antal besökare.
-              Uppskattningsvis 1000 besökare sökte sig under dagen till Djupvik.
-              Intresset var stort för de besökande organisationerna som
-              informerade och alla fick möjlighet att titta och ställa frågor.
-              Barnen fick rida, de bjöds på bulle och dricka och många prövade
-              lyckan i fiskdammen. Det fanns möjlighet att handla kaffe, korv,
-              dricka och glass. Många dröjde sig kvar i hamnområdet och trivdes
-              i det inledningsvis lite blåsiga men vackra vädret.
-            </p>
-            <picture>
-              <img src="images/HamnensDag.jpg" />
-            </picture>
-          </article>
-        </section>
-        <aside class="child">
-          <a><href>Tillbaka till toppen</href></a>
-        </aside>
-      </main>
-      <footer id="footer">
-        <nav>
-          <ul>
-            <li><a href="/html/kontakta-oss.html">Kontakta oss</a></li>
-          </ul>
-        </nav>
-        <hr />
-      </footer>
-    </div>
-    <!-- end of container -->
-  </body>
+        <article class="child">
+          <h3>Succé för hamnens dag!</h3>
+          <time>2018-07-16</time>
+          <p>
+            Lördagen den 16 juli arrangerade föreningen Djupviks hamn i Eksta
+            ”Hamnens dag” i Djupvik. Vårt arbete har med åren alltmer också
+            inriktats på att alla besökare, även de som kommer landvägen skall
+            trivas i det vackra hamnområdet. Nu bjöds det in till ”Hamnens
+            dag”. På plats fanns sjöfartsverkets SAR-helikopter,
+            Sjöräddningens båt Hwitstjärna, släckningsbil från
+            räddningstjänsten i Klintehamn, russ från Gannarve och ett antal
+            loppisförsäljare. Aktiviteten lockade ett stort antal besökare.
+            Uppskattningsvis 1000 besökare sökte sig under dagen till Djupvik.
+            Intresset var stort för de besökande organisationerna som
+            informerade och alla fick möjlighet att titta och ställa frågor.
+            Barnen fick rida, de bjöds på bulle och dricka och många prövade
+            lyckan i fiskdammen. Det fanns möjlighet att handla kaffe, korv,
+            dricka och glass. Många dröjde sig kvar i hamnområdet och trivdes
+            i det inledningsvis lite blåsiga men vackra vädret.
+          </p>
+          <picture>
+            <img src="images/HamnensDag.jpg" />
+          </picture>
+        </article>
+      </section>
+      <aside class="child">
+        <a>
+          <href>Tillbaka till toppen</href>
+        </a>
+      </aside>
+    </main>
+    <footer id="footer">
+      <nav>
+        <ul>
+          <li><a href="/html/kontakta-oss.html">Kontakta oss</a></li>
+        </ul>
+      </nav>
+      <hr />
+    </footer>
+  </div>
+  <!-- end of container -->
+</body>
+
 </html>
