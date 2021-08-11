@@ -345,6 +345,9 @@
   #activities-h2 {
     color: #0e4b67;
   }
+  #activities p {
+    margin: 0.5em;
+  }
   #history {
     flex-direction: column;
     justify-content: center;
@@ -470,7 +473,7 @@
     align-items: center;
     padding: 0.5em;
   }
-    #textbox-input-2 label{
+  #textbox-input-2 label {
     padding: 0.5em;
   }
   textarea {
@@ -478,7 +481,17 @@
     max-width: 80%;
     min-height: 10em;
   }
-  fieldset{
-    border:none;
+  fieldset {
+    border: none;
+  }
+  #current-events {
+    width: 95%;
+  }
+  #current-events h2 {
+    font-size: x-large;
+    text-align: center;
+  }
+  #community {
+    color: #7198bb;
   }
 }
