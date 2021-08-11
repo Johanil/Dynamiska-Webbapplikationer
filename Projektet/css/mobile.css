@@ -16,7 +16,6 @@
   main {
     display: flex;
     flex-direction: column;
-    scroll-snap-type: y mandatory;
     overflow-y: scroll;
   }
   body {
@@ -39,10 +38,10 @@
     position: relative;
     display: flex;
     justify-content: center;
-    align-self:center;
+    align-self: center;
     color: rgb(255, 255, 255);
   }
-  
+
   .textOverlay h2 {
     font-family: "Permanent Marker", cursive;
     text-align: center;
@@ -54,9 +53,10 @@
   }
 
   #gasthamn {
-    color: #f69252;
+    color: #fe8f22;
     font-size: xxx-large;
     padding-top: 2em;
+    top: 25%;
   }
   .textOverlay div {
     justify-self: center;
@@ -70,15 +70,14 @@
     );
     transform: translate(-50%, -50%);
   }
-#textOverlay-div{
-  width: 60%;
-  top:70%;
-  border-radius: 1em;
-  position: absolute;
-  left:50%;
-  justify-self: center;
-
-}
+  #textOverlay-div {
+    width: 60%;
+    top: 70%;
+    border-radius: 1em;
+    position: absolute;
+    left: 50%;
+    justify-self: center;
+  }
   .textOverlay p {
     border-radius: 0.5em;
     padding: 1em;
@@ -170,7 +169,7 @@
     left: 0;
     text-align: justify;
   }
-  .smallText{
+  .smallText {
     text-align: justify;
   }
   .moreText-active {
@@ -328,7 +327,9 @@
     padding-top: 1em;
     text-align: left;
   }
-
+  #harbour h3 {
+    font-size: x-large;
+  }
   #harbour {
     margin: 1em;
   }
@@ -337,11 +338,24 @@
     justify-content: center;
     margin: 0;
     padding: 0;
-    color:#0e4b67;
+    color: #0e4b67;
   }
-  #activities-h2{
-    color:#0e4b67;
+  #activities-h2 {
+    color: #0e4b67;
   }
+  #history {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    color: #4f5153;
+  }
+  #history-h2 {
+    color: #555758;
+    font-size: 2.5em;
+    top: 22%;
+  }
+
   #activities article {
     width: auto;
   }
@@ -350,5 +364,15 @@
     color: rgb(250, 125, 75);
     font-size: large;
     font-weight: bold;
+  }
+  #history {
+    width: 100%;
+  }
+  #information-story p {
+    padding: 0.5em;
+  }
+  #information-story h4,
+  #stormnight-story h4 {
+    font-size: large;
   }
 }
