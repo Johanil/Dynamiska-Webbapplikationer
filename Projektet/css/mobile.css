@@ -458,8 +458,8 @@
     padding: 0.5em;
     margin: 0.5em;
     display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 0.1em  solid #ccc;
+    border-radius: 0.4em ;
   }
   .radio-input {
     align-self: center;
@@ -480,6 +480,8 @@
     min-width: 80%;
     max-width: 80%;
     min-height: 10em;
+    border: 0.1em solid #ccc;
+    border-radius: 0.4em ;
   }
   fieldset {
     border: none;
