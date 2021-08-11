@@ -11,7 +11,7 @@
   .container {
     display: flex;
     flex-direction: column;
-    background-color: rgb(244, 231, 220);
+    background-color: rgb(240, 223, 207);
   }
   main {
     display: flex;
@@ -50,9 +50,11 @@
     top: 10%;
     color: black;
   }
-  #gasthamn{
-    color:rgb(164, 231, 252);
+
+  #gasthamn {
+    color: #f69252;
     font-size: xxx-large;
+    padding-top: 2em;
   }
   #weather {
     height: 100%;
@@ -166,7 +168,7 @@
     display: none;
   }
   .child {
-    background: rgb(205, 183, 165);
+    background: rgb(250, 240, 232);
     font-size: medium;
     text-align: center;
     margin-top: 0.5rem;
@@ -213,7 +215,7 @@
     padding: 0.5em;
     margin: 0.5em;
     border-width: 0.5em;
-    background-color: rgba(253, 253, 253, 0.281);
+    background-color: rgba(197, 186, 177, 0.863);
   }
   #read-more-btn:hover {
     cursor: pointer;
@@ -261,20 +263,20 @@
     position: fixed;
     margin-top: 4em;
     z-index: 1;
-    opacity: 0;
-    background-color: rgb(245, 171, 73);
-    border-bottom-left-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
+    opacity: 1;
+    top: 0em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
   }
   .nav-active {
     display: block;
-    transform: translateY(0%);
-    background-color: rgb(245, 171, 73);
-    opacity: 1;
+    transition: 0.8s;
+    background-color: rgb(245, 240, 236);
+    top: -5em;
   }
   .nav_menu ul {
     padding: 0%;
-    transition: 1.8s;
+    transition: 0.8s;
     opacity: 0;
   }
   .nav-active ul {
@@ -290,7 +292,7 @@
     z-index: 2;
     position: fixed;
     transition: 0.8s;
-    background-color: rgb(245, 171, 73);
+    background-color: rgb(246, 227, 212);
   }
 
   h1 {
