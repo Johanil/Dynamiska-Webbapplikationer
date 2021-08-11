@@ -32,16 +32,17 @@
   .background {
     display: flex;
     height: 100vh;
-    width: auto;
     justify-content: center;
     overflow-x: hidden;
   }
   .textOverlay {
     position: relative;
-    text-align: center;
     display: flex;
+    justify-content: center;
+    align-self:center;
     color: rgb(255, 255, 255);
   }
+  
   .textOverlay h2 {
     font-family: "Permanent Marker", cursive;
     text-align: center;
@@ -57,27 +58,32 @@
     font-size: xxx-large;
     padding-top: 2em;
   }
+  .textOverlay div {
+    justify-self: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(68, 67, 67, 0.459) 99%,
+      rgba(226, 220, 220, 0.199) 99%
+    );
+    transform: translate(-50%, -50%);
+  }
+#textOverlay-div{
+  width: 60%;
+  top:70%;
+  border-radius: 1em;
+  position: absolute;
+  left:50%;
+  justify-self: center;
 
-
-
+}
   .textOverlay p {
     border-radius: 0.5em;
     padding: 1em;
-    margin: 1em;
-    display: flex;
     text-align: center;
-    height: 36%;
-    position: absolute;
     border-radius: 0;
-    background: linear-gradient(
-      0deg,
-      rgba(250, 250, 250, 0.897) 0%,
-      rgba(231, 222, 222, 0.199) 99%
-    );
-    top: 77.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75%;
     font-size: large;
     color: rgb(0, 0, 0);
   }
@@ -162,6 +168,10 @@
     display: none;
     bottom: 0;
     left: 0;
+    text-align: justify;
+  }
+  .smallText{
+    text-align: justify;
   }
   .moreText-active {
     display: inline;
@@ -207,10 +217,6 @@
   nav {
     display: flex;
     justify-content: center;
-  }
-  .smallText {
-    display: inline;
-    margin: 0em;
   }
   .nav_menu {
     width: 100%;
@@ -304,8 +310,8 @@
   #harbour {
     display: flex;
     width: 90%;
-    margin:0.5em;
-    padding:1em;
+    margin: 0.5em;
+    padding: 1em;
   }
   #harbour div {
     justify-content: flex-start;
@@ -315,7 +321,7 @@
     text-align: left;
     padding: 0;
   }
-    #harbour li {
+  #harbour li {
     text-align: center;
   }
   #harbour li:last-child {
@@ -325,24 +331,22 @@
   #harbour p {
     text-align: left;
   }
-    #harbour {
+  #harbour {
     margin: 1em;
   }
-  #activities{
+  #activities {
     flex-direction: column;
     justify-content: center;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
   }
-    #activities article{
+  #activities article {
     width: auto;
   }
-    #gasthamn-div p {
-    height: 25%;
+  #gasthamn-div p {
     top: 83%;
-    color: rgb(167, 57, 14);
-    background: linear-gradient(0deg, #f8a066 0%, rgba(245, 237, 237, 0) 75%);
+    color: rgb(250, 125, 75);
     font-size: large;
-    font-weight:bold;
+    font-weight: bold;
   }
 }

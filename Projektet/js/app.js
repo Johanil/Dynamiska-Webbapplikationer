@@ -1,5 +1,5 @@
 import displayWeatherdata from "../js/display_weatherdata.js";
-
+import showMoreText from "./showMore.js";
 function init() {
   hide(true);
 }
@@ -7,7 +7,8 @@ function app() {
   slidingNav();
   scrollToTop();
   scrollHide();
-  displayWeatherdata();
+    displayWeatherdata();
+    showMoreText();
 }
 
 const slidingNav = () => {
