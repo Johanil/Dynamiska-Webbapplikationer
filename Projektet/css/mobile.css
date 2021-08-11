@@ -328,9 +328,7 @@
     padding-top: 1em;
     text-align: left;
   }
-  #harbour p {
-    text-align: left;
-  }
+
   #harbour {
     margin: 1em;
   }
@@ -339,6 +337,10 @@
     justify-content: center;
     margin: 0;
     padding: 0;
+    color:#0e4b67;
+  }
+  #activities-h2{
+    color:#0e4b67;
   }
   #activities article {
     width: auto;
