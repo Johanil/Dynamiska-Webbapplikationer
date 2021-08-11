@@ -73,38 +73,17 @@ function addForecast(
     "</td>" +
     "<td>" +
     temperature +
+    " C°" +
     "</td>" +
     "<td>" +
     windDirection +
     "(" +
-    windStrength +
+    windStrength+" m/s" +
     ")" +
     "</td>" +
     "<td>" +
     interpretSymbol(weatherStatus) +
     "</td>";
-    
-  // <td>` +
-  // windStrength +
-  // `</td>
-  // <td>` +
-  // temperature +
-  // `</td>
-  // <td>` +
-  // interpretSymbol(weatherStatus) +
-  // `</td>`;
-
-  // date +
-  // " " +
-  // (datetime + 2).toString() +
-  // " " +
-  // temperature +
-  // "C " +
-  // windStrength +
-  // "m/s " +
-  // windDirection +
-  // "d  " +
-
   return html;
 }
 function interpretSymbol(number) {

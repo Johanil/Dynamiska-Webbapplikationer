@@ -128,6 +128,7 @@
     align-items: center;
     scroll-snap-stop: always;
     overflow-y: hidden;
+    overflow-x: hidden;
   }
   .scroll-active {
     display: none;
@@ -374,5 +375,10 @@
   #information-story h4,
   #stormnight-story h4 {
     font-size: large;
+  }
+  .figuretext{
+    padding:0.1em;
+    margin: 0.1em;
+    font-size: small;
   }
 }
