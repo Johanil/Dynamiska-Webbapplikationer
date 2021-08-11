@@ -136,6 +136,7 @@
   .child {
     background: rgb(250, 240, 232);
     font-size: medium;
+    width: 90%;
     text-align: center;
     margin-top: 0.5rem;
     scroll-snap-align: start;
@@ -376,9 +377,108 @@
   #stormnight-story h4 {
     font-size: large;
   }
-  .figuretext{
-    padding:0.1em;
+  .figuretext {
+    padding: 0.1em;
     margin: 0.1em;
     font-size: small;
+  }
+  #names-table {
+    display: grid;
+    flex-direction: row;
+    grid-template-rows: 100% auto;
+    justify-content: center;
+    width: 100%;
+  }
+  #names-table td {
+    text-align: left;
+    font-size: medium;
+    width: 55%;
+  }
+  #member-table {
+    display: grid;
+    flex-direction: row;
+    grid-template-rows: 100% auto;
+    justify-content: center;
+    width: 100%;
+  }
+  #member-table td {
+    text-align: left;
+    font-size: medium;
+    width: 33%;
+  }
+  #member-table th {
+    font-size: medium;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+  #contact-info {
+    width: 90%;
+  }
+  #contact-h2 {
+    color: #4f535c;
+  }
+  #contact-form {
+    padding-bottom: 2em;
+    margin-bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+  }
+  #contact-form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #contact-form #send-button {
+    width: 50%;
+    height: 50%;
+    color: black;
+    border: black;
+    border-radius: 0.4em;
+    padding: 0.5em;
+    margin: 0.5em;
+    border-width: 0.5em;
+    background-color: rgba(85, 84, 81, 0.863);
+  }
+  #send-button:hover {
+    background-color: rgba(204, 200, 187, 0.863);
+    cursor: pointer;
+  }
+  .textbox-input {
+    align-self: center;
+    width: 80%;
+    padding: 0.5em;
+    margin: 0.5em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .radio-input {
+    align-self: center;
+    width: 80%;
+    padding: 0.5em;
+    margin: 0.5em;
+    border: solid #ccc;
+    border-radius: 0.1em;
+  }
+  #textbox-input-2 {
+    align-items: center;
+    padding: 0.5em;
+  }
+    #textbox-input-2 label{
+    padding: 0.5em;
+  }
+  textarea {
+    min-width: 80%;
+    max-width: 80%;
+    min-height: 10em;
+  }
+  fieldset{
+    border:none;
   }
 }
