@@ -15,7 +15,7 @@
     <header>
       <div class="header-top">
         <input type="button" value="EN" id="nav_en" />
-        <label for="nav_en" class="nav_toggle">
+        <label for="nav_en" id="english-button" class="nav_toggle">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="1200" height="600" id="english">
             <clipPath id="s">
               <path d="M0,0 v30 h60 v-30 z" />
@@ -53,6 +53,9 @@
       <div class="textOverlay">
         <h2 id=activities-h2>Aktiviteter</h2>
         <picture class="background">
+          <source media="(max-width: 480px)" srcset="../images/D-13-small.jpg">
+          <source media="(max-width: 768px)" srcset="../images/D-13-medium.jpg">
+          <source media="(min-width: 769px)" srcset="../images/D-13-large.jpg">
           <img src="../images/D-13.jpg" alt="Vatten och en klippa i fjärran" />
         </picture>
       </div>
@@ -86,7 +89,12 @@
             och 4 meter bred och består av 20 stycken stenar.
             <br />
           </p>
-          <picture><img src="../images/D-18.jpg" alt="Stenar placerade likt en båt"></picture>
+          <picture>
+            <source media="(max-width: 480px)" srcset="../images/D-18-small.jpg">
+            <source media="(max-width: 768px)" srcset="../images/D-18-medium.jpg">
+            <source media="(min-width: 769px)" srcset="../images/D-19-large.jpg">
+            <img src="../images/D-18-small.jpg" alt="Stenar placerade likt en båt">
+          </picture>
           <p class="smallText">Skeppssättningen
             är alltså en gravplats för en person. Personen som dött brändes på
             bål och sedan krossades och tvättades den dödes ben och lades i en
@@ -101,7 +109,12 @@
             Utefter Ekstakusten där Djupviks fiskeläge ligger finns några
             badstränder. En av dem hittar du här i Djupvik.
           </p>
-          <picture><img src="../images/D-11.jpg" alt="En sandstrand"> </picture>
+          <picture>
+            <source media="(max-width: 480px)" srcset="../images/D-11-small.jpg">
+            <source media="(max-width: 768px)" srcset="../images/D-11-medium.jpg">
+            <source media="(min-width: 769px)" srcset="../images/D-11-large.jpg">
+            <img src="../images/D-11-small.jpg" alt="En sandstrand">
+          </picture>
           <p class="figuretext">Foto: Bernt Enderborg</p>
           <p class="smallText">
             Man kan cykla eller åka bil på vägen som slingrar sig ovanför

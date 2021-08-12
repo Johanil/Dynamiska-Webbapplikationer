@@ -15,7 +15,7 @@
     <header>
       <div class="header-top">
         <input type="button" value="EN" id="nav_en" />
-        <label for="nav_en" class="nav_toggle">
+        <label for="nav_en" id="english-button" class="nav_toggle">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="1200" height="600" id="english">
             <clipPath id="s">
               <path d="M0,0 v30 h60 v-30 z" />
@@ -53,7 +53,10 @@
       <div id="gasthamn-div" class="textOverlay">
         <h2 id=gasthamn>Gästhamnen</h2>
         <picture class="background">
-          <img src="../images/D-8.jpg" alt="En eka i en hamn" />
+                    <source media="(max-width: 480px)" srcset="../images/D-8-small.jpg">
+                    <source media="(max-width: 768px)" srcset="../images/D-8-medium.jpg">
+                    <source media="(min-width: 769px)" srcset="../images/D-10-large.jpg">
+          <img src="../images/D-8-small.jpg" alt="En eka i en hamn" />
         </picture>
       </div>
       <section id="harbour" class="child">

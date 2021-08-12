@@ -15,7 +15,7 @@
     <header>
       <div class="header-top">
         <input type="button" value="EN" id="nav_en" />
-        <label for="nav_en" class="nav_toggle">
+        <label for="nav_en" id="english-button" class="nav_toggle">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="1200" height="600" id="english">
             <clipPath id="s">
               <path d="M0,0 v30 h60 v-30 z" />
@@ -53,6 +53,9 @@
       <div class="textOverlay">
         <h2 id=history-h2>Djupviks historia</h2>
         <picture class="background">
+          <source media="(max-width: 480px)" srcset="../images/D-12-small.jpg">
+          <source media="(max-width: 768px)" srcset="../images/D-12-medium.jpg">
+          <source media="(min-width: 769px)" srcset="../images/D-12-large.jpg">
           <img src="../images/D-12.jpg" alt="Djupviks hamn och fiskebodar" />
         </picture>
       </div>

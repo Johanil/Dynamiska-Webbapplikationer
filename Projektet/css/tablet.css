@@ -18,12 +18,34 @@
     display: block;
     background-color: rgb(245, 240, 236);
   }
-
   nav ul {
     display: flex;
     flex-direction: row;
     gap: 1rem;
     margin: 1rem;
     align-items: center;
+    justify-content: space-evenly;
+  }
+
+  #contact-form div {
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  fieldset {
+    justify-content: space-between;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+  }
+  #group1 input {
+    padding: 0;
+    margin: 0;
+  }
+  #group2 input {
+    padding: 0;
+    margin: 0;
   }
 }

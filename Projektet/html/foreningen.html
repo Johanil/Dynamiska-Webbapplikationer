@@ -15,7 +15,7 @@
     <header>
       <div class="header-top">
         <input type="button" value="EN" id="nav_en" />
-        <label for="nav_en" class="nav_toggle">
+        <label for="nav_en" id="english-button" class="nav_toggle">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="1200" height="600" id="english">
             <clipPath id="s">
               <path d="M0,0 v30 h60 v-30 z" />
@@ -54,7 +54,10 @@
         <h2 id="community">Föreningen</h2>
         <!-- #ff5949 -->
         <picture class="background">
-          <img src="../images/D-15.jpg" alt="Livboj på ett staket" />
+          <source media="(max-width: 480px)" srcset="../images/D-15-small.jpg">
+          <source media="(max-width: 768px)" srcset="../images/D-15-medium.jpg">
+          <source media="(min-width: 769px)" srcset="../images/D-15-large.jpg">
+          <img src="../images/D-15-small.jpg" alt="Livboj på ett staket" />
         </picture>
       </div>
       <section id="current-events">

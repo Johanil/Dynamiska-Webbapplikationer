@@ -10,7 +10,7 @@ function init() {
     scrollHide();
     displayWeatherdata();
     showMoreText();
-    onSend();
+    englishNav();
   }
 
   const slidingNav = () => {
@@ -19,6 +19,12 @@ function init() {
     burgerBars.addEventListener("click", () => {
       nav.classList.toggle("nav-active");
       burgerBars.classList.toggle("toggle");
+    });
+  };
+  const englishNav = () => {
+    const button = document.querySelector("#english-button");
+    button.addEventListener("click", () => {
+      window.location.href = "../html/english.html";
     });
   };
 
