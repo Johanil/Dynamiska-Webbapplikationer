@@ -21,13 +21,7 @@ function init() {
       burgerBars.classList.toggle("toggle");
     });
   };
-  // INTE KLAR med denna!!!
-  function onSend() {
-    const send = document.querySelector("#send_button");
-    send.addEventListener("click", function () {
-      console.log("s");
-    });
-  }
+
   const scrollToTop = () => {
     const aside = document.querySelector("aside");
     aside.addEventListener("click", () => {

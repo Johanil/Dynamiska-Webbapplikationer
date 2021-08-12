@@ -54,7 +54,7 @@
 
   #gasthamn {
     color: #fe8f22;
-    font-size: xxx-large;
+    font-size: xx-large;
     padding-top: 2em;
     top: 25%;
   }
@@ -226,20 +226,17 @@
     align-items: center;
     padding: 0;
     transition: 0.8s;
-    display: block;
     position: fixed;
     margin-top: 4em;
     z-index: 1;
-    opacity: 1;
     top: 0em;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
+    display: none;
   }
   .nav-active {
     display: block;
-    transition: 0.8s;
     background-color: rgb(245, 240, 236);
-    top: -5em;
   }
   .nav_menu ul {
     padding: 0%;
@@ -458,8 +455,8 @@
     padding: 0.5em;
     margin: 0.5em;
     display: inline-block;
-    border: 0.1em  solid #ccc;
-    border-radius: 0.4em ;
+    border: 0.1em solid #ccc;
+    border-radius: 0.4em;
   }
   .radio-input {
     align-self: center;
@@ -481,7 +478,7 @@
     max-width: 80%;
     min-height: 10em;
     border: 0.1em solid #ccc;
-    border-radius: 0.4em ;
+    border-radius: 0.4em;
   }
   fieldset {
     border: none;
