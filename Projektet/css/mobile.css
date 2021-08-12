@@ -139,13 +139,20 @@
     width: 100%;
   }
   #footer {
-    height: 10%;
+    height: 25%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.3em;
+    margin: 0.1em;
   }
 
-  #footer ul {
-    width: 80%;
+  #footer p {
+    width: 100%;
     flex-direction: column;
-
+    font-size: small;
     align-items: center;
     text-align: center;
     justify-content: center;

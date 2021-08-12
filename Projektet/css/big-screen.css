@@ -11,6 +11,7 @@
   .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     background-color: rgb(240, 223, 207);
   }
   main {
@@ -30,6 +31,28 @@
     height: 100vh;
     justify-content: center;
     overflow-x: hidden;
+  }
+  #footer {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.3em;
+    margin: 0.1em;
+  }
+
+  #footer p {
+    width: 100%;
+    flex-direction: column;
+    font-size: small;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(245, 171, 73, 0.267);
   }
   .textOverlay {
     position: relative;
@@ -132,7 +155,7 @@
   #news img {
     width: 50%;
   }
-    #history img {
+  #history img {
     width: 50%;
   }
   .parent {
@@ -165,12 +188,15 @@
     display: flex;
     height: 2em;
     width: 100%;
-    padding: 0.5em;
+    padding: 0em;
     justify-content: space-between;
     z-index: 2;
     position: fixed;
     transition: 0.8s;
     background-color: rgb(246, 227, 212);
+  }
+  .header-top h1 {
+    padding-right: 10%;
   }
   nav ul li {
     list-style-type: none;
@@ -225,7 +251,15 @@
   .nav_toggle {
     width: 8%;
   }
-
+  #english-version {
+    width: 45%;
+  }
+  #english-version p {
+    text-align: center;
+  }
+  #english-version img {
+    width: 50%;
+  }
   #close {
     display: none;
   }
@@ -255,20 +289,6 @@
   .st0 {
     fill: none;
   }
-  .burgerBars div {
-    width: 1.6em;
-    height: 0.3em;
-    background-color: rgb(0, 0, 0);
-    margin: 0.3em;
-    margin-right: 1em;
-    transition: transform 0.5s;
-  }
-  .burgerBars {
-    display: block;
-  }
-  .burgerBars:hover {
-    cursor: pointer;
-  }
 
   .toggle .line1 {
     transform: translatex(10%);
@@ -281,7 +301,7 @@
   }
   #harbour {
     display: flex;
-    width: 45%;
+    width: 25%;
     margin: 0.5em;
     padding: 1em;
     font-size: large;
@@ -311,7 +331,7 @@
     margin: 1em;
   }
   #activities {
-    width: 75%;
+    width: 55%;
     flex-direction: column;
     justify-self: center;
     justify-content: center;
@@ -325,12 +345,12 @@
   #activities p {
     margin: 0.5em;
   }
-  #activities img{
+  #activities img {
     width: 80%;
   }
   #history {
     flex-direction: column;
-    width: 80%;
+    width: 55%;
     justify-content: center;
     margin: 0;
     padding: 0;
@@ -397,7 +417,7 @@
     text-align: left;
   }
   #contact-info {
-    width: 90%;
+    width: 25%;
   }
   #contact-h2 {
     color: #4f535c;
@@ -409,8 +429,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items:baseline;
-    width: 85%;
+    align-items: baseline;
+    width: 45%;
+
     flex-basis: 25%;
   }
   .child-item:not(:first-child) {
@@ -434,7 +455,7 @@
     background-color: rgba(204, 200, 187, 0.863);
     cursor: pointer;
   }
-  #send-button{
+  #send-button {
     align-self: center;
   }
   .textbox-input {
