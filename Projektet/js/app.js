@@ -2,7 +2,7 @@ import displayWeatherdata from "../js/display_weatherdata.js";
 import showMoreText from "./showMore.js";
 window.addEventListener("load", init);
 function init() {
-  hide(true);
+  bigScreen();
 
   function app() {
     slidingNav();
@@ -11,8 +11,19 @@ function init() {
     displayWeatherdata();
     showMoreText();
     englishNav();
+    sizeChanged();
   }
-
+  function bigScreen() {
+    if (window.innerWidth < 768) {
+      hide(true);
+    } else {
+      hide(false);
+      const burgerBars = document.querySelector(".burgerBars");
+      const nav = document.querySelector(".nav_menu");
+      burgerBars.classList.toggle("toggle");
+      nav.classList.toggle("nav-active");
+    }
+  }
   const slidingNav = () => {
     const burgerBars = document.querySelector(".burgerBars");
     const nav = document.querySelector(".nav_menu");
@@ -51,18 +62,30 @@ function init() {
       navbar.classList.toggle(".nav-menu-active");
     }
   }
-
-  const scrollHide = () => {
+  function sizeChanged() {
+    window.addEventListener("resize", function () {
+      if (window.innerWidth < 768 && windowSize > lastSize) {
+        hide(true);
+      } else {
+        hide(false);
+      }
+    });
+  }
+  function scrollHide() {
     var lastScrollTop = 0;
     window.addEventListener("scroll", function () {
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      if (scrollTop < lastScrollTop && window.pageYOffset < "180") {
+      if (
+        scrollTop < lastScrollTop &&
+        window.pageYOffset < "180" &&
+        window.innerWidth < 768
+      ) {
         hide(true);
       } else if (scrollTop > lastScrollTop && window.pageYOffset > "180") {
         hide(false);
       }
       lastScrollTop = scrollTop;
     });
-  };
+  }
   app();
 }
