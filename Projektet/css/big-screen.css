@@ -137,20 +137,18 @@
     width: 90%;
   }
   #hamensdag {
-    flex-direction: column;
-    width: 33%;
+    justify-self: unset;
   }
   #news h2 {
-    flex: 20%;
-    margin-left: 1.5em;
+    text-align: center;
+    justify-self: center;
   }
   #news {
-    border-radius: 1em;
-    padding: 0.5em;
-
-    margin: 0.5em;
     display: flex;
-    flex-direction: row;
+    width: 55%;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
   }
   #news img {
     width: 50%;
@@ -362,7 +360,7 @@
     top: 22%;
   }
   #hamnjob {
-    width: 33%;
+    justify-self: unset;
   }
   #activities article {
     width: auto;
