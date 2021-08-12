@@ -169,11 +169,8 @@
     background: rgb(250, 240, 232);
     font-size: medium;
     text-align: center;
-    flex-grow: 1;
     height: 50%;
     margin-top: 0.5rem;
-    display: flex;
-    flex-flow: column;
     justify-content: center;
     border-radius: 0.5em;
     padding: 2em;
@@ -415,22 +412,34 @@
     text-align: left;
   }
   #contact-info {
-    width: 25%;
+    width: 20%;
   }
   #contact-h2 {
     color: #4f535c;
   }
   #contact-form {
-    padding-bottom: 2em;
-    margin-bottom: 1.5em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: baseline;
     width: 45%;
-
-    flex-basis: 25%;
+  }
+  #number {
+    width: 50%;
+    margin: auto;
+    justify-self: center;
+  }
+  #email-text {
+    width: 95%;
+    padding: 0.5em;
+    justify-self: unset;
+    margin: auto;
+  }
+  #textbox-input-3 {
+    display: flex;
+    flex-direction: column;
+  }
+  #contact-form div {
+    margin: auto;
+  }
+  .child-item {
+    width: 34%;
   }
   .child-item:not(:first-child) {
     flex: 1;
@@ -457,11 +466,9 @@
     align-self: center;
   }
   .textbox-input {
-    align-self: center;
     width: 80%;
     padding: 0.5em;
     margin: 0.5em;
-    display: inline-block;
     border: 0.1em solid #ccc;
     border-radius: 0.4em;
   }
@@ -473,12 +480,23 @@
     border: solid #ccc;
     border-radius: 0.1em;
   }
+  #textbox-input-1 {
+    align-items: center;
+    padding: 0.5em;
+  }
   #textbox-input-2 {
     align-items: center;
     padding: 0.5em;
   }
   #textbox-input-2 label {
     padding: 0.5em;
+  }
+  #textbox-input-4 {
+    align-items: center;
+    width: 50%;
+    margin: 1em;
+    padding: 1em;
+    width: 80%;
   }
   textarea {
     min-width: 80%;
@@ -489,6 +507,8 @@
   }
   fieldset {
     border: none;
+    display: grid;
+    justify-content: center;
   }
   #current-events {
     width: 95%;

@@ -134,7 +134,7 @@
   .scroll-active {
     display: none;
   }
-    #footer {
+  #footer {
     height: 25%;
     width: 100%;
     display: flex;
@@ -239,6 +239,7 @@
   #close {
     display: none;
   }
+
   #nav_checkbox,
   #nav_en {
     display: none;
