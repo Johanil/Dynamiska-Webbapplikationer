@@ -4,8 +4,36 @@ export default async function displayWeatherdata() {
   const data = await fetchWeatherdata();
   addWeatherData(data);
 }
+function addWeatherTable() {
+  var html = `<h4>Idag</h4>
+          <div>
+            <table id="weather-today">
+              <tr>
+                <th>KL</th>
+                <th>Temp</th>
+                <th>Vind</th>
+                <th>Himmel</th>
+              </tr>
+            </table>
+          </div>
+          <h4>Imorgon</h4>
+          <div>
+            <table id=weather-tomorrow>
+              <tr>
+                <th>KL</th>
+                <th>Temp</th>
+                <th>Vind</th>
+                <th>Himmel</th>
+              </tr>
+            </table>
+          </div>`;
+  let weatherDiv = document.querySelector("#weather-div");
+  weatherDiv.innerHTML = html;
+  return weatherDiv;
+}
 
 function addWeatherData(data) {
+  addWeatherTable();
   let table1 = document.querySelector("#weather-today");
   let table2 = document.querySelector("#weather-tomorrow");
   const today = new Date();
@@ -23,8 +51,8 @@ function addWeatherData(data) {
     let date = datetime.getDate();
     let acceptableUTCHours = [4, 10, 16];
     if (
-      (acceptableUTCHours.includes(datetimeHours) && ((date == todayDay) ||
-      date == tomorrowDay))
+      acceptableUTCHours.includes(datetimeHours) &&
+      (date == todayDay || date == tomorrowDay)
     ) {
       let tr = document.createElement("tr");
       forecast.parameters.map((p) => {
@@ -55,7 +83,6 @@ function addWeatherData(data) {
         }
       });
     }
-
   });
 }
 
@@ -78,7 +105,8 @@ function addForecast(
     "<td>" +
     windDirection +
     "(" +
-    windStrength+" m/s" +
+    windStrength +
+    " m/s" +
     ")" +
     "</td>" +
     "<td>" +
