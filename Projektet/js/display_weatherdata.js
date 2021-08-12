@@ -4,10 +4,43 @@ export default async function displayWeatherdata() {
   const data = await fetchWeatherdata();
   addWeatherData(data);
 }
+function addWeatherTable() {
+  var html = `<h4>Idag</h4>
+          <div>
+            <table id="weather-today">
+              <tr>
+                <th>KL</th>
+                <th>Temp</th>
+                <th>Vind</th>
+                <th>Himmel</th>
+              </tr>
+            </table>
+          </div>
+          <h4>Imorgon</h4>
+          <div>
+            <table id=weather-tomorrow>
+              <tr>
+                <th>KL</th>
+                <th>Temp</th>
+                <th>Vind</th>
+                <th>Himmel</th>
+              </tr>
+            </table>
+          </div>`;
+  let weatherDiv = document.querySelector("#weather-div");
+  weatherDiv.innerHTML = html;
+  return weatherDiv;
+}
 
 function addWeatherData(data) {
-  let table = document.querySelector("#weather-today");
-  console.log(data);
+  addWeatherTable();
+  let table1 = document.querySelector("#weather-today");
+  let table2 = document.querySelector("#weather-tomorrow");
+  const today = new Date();
+  const tomorrow = new Date(today);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  let tomorrowDay = tomorrow.getUTCDate();
+  let todayDay = today.getUTCDate();
   data.timeSeries.forEach((forecast) => {
     let windDirection = "";
     let temperature = "";
@@ -17,12 +50,12 @@ function addWeatherData(data) {
     let datetimeHours = datetime.getHours();
     let date = datetime.getDate();
     let acceptableUTCHours = [4, 10, 16];
-    let td = document.createElement("td");
-    if (acceptableUTCHours.includes(datetimeHours)) {
-      console.log(datetime);
-      console.log(datetimeHours);
+    if (
+      acceptableUTCHours.includes(datetimeHours) &&
+      (date == todayDay || date == tomorrowDay)
+    ) {
+      let tr = document.createElement("tr");
       forecast.parameters.map((p) => {
-        let tr = document.createElement("tr");
         if (p.name == "wd") {
           windDirection = p.values.toString();
         }
@@ -33,17 +66,21 @@ function addWeatherData(data) {
           windStrength = p.values.toString();
         }
         if (p.name == "Wsymb2") {
-          weatherStatus = p.values[0].toString();
+          weatherStatus = p.values[0];
         }
-        td.innerHTML = addForecast(
+        tr.innerHTML = addForecast(
           date,
-          datetimeHours,
+          datetimeHours + 2,
           windDirection,
           temperature,
           windStrength,
           weatherStatus
         );
-        tr.appendChild(td);
+        if (date == today.getUTCDate()) {
+          table1.appendChild(tr);
+        } else if (date == tomorrow.getUTCDate()) {
+          table2.appendChild(tr);
+        }
       });
     }
   });
@@ -57,28 +94,24 @@ function addForecast(
   windStrength,
   weatherStatus
 ) {
-  var html = "<td>" + windDirection + "</td>";
-  // <td>` +
-  // windStrength +
-  // `</td>
-  // <td>` +
-  // temperature +
-  // `</td>
-  // <td>` +
-  // interpretSymbol(weatherStatus) +
-  // `</td>`;
-
-  // date +
-  // " " +
-  // (datetime + 2).toString() +
-  // " " +
-  // temperature +
-  // "C " +
-  // windStrength +
-  // "m/s " +
-  // windDirection +
-  // "d  " +
-
+  var html =
+    "<td>" +
+    datetime +
+    "</td>" +
+    "<td>" +
+    temperature +
+    " C°" +
+    "</td>" +
+    "<td>" +
+    windDirection +
+    "(" +
+    windStrength +
+    " m/s" +
+    ")" +
+    "</td>" +
+    "<td>" +
+    interpretSymbol(weatherStatus) +
+    "</td>";
   return html;
 }
 function interpretSymbol(number) {

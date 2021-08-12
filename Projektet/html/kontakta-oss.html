@@ -1,130 +1,126 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <title>Djupvik</title>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width = device-width, initial-scale = 1, maximum-scale = 2"
-    />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/normalize.css" />
-    <script src="../js/app.js" type="module"></script>
-  </head>
-  <body>
-    <div id="container">
-      <header>
-        <div class="header-top">
-          <input type="button" id="nav_en" />
-          <label for="nav_en" class="nav_toggle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 60 30"
-              width="1200"
-              height="600"
-              id="english"
-            >
-              <clipPath id="s">
-                <path d="M0,0 v30 h60 v-30 z" />
-              </clipPath>
-              <clipPath id="t">
-                <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z" />
-              </clipPath>
-              <g clip-path="url(#s)">
-                <path d="M0,0 v30 h60 v-30 z" fill="#012169" />
-                <path
-                  d="M0,0 L60,30 M60,0 L0,30"
-                  stroke="#fff"
-                  stroke-width="6"
-                />
-                <path
-                  d="M0,0 L60,30 M60,0 L0,30"
-                  clip-path="url(#t)"
-                  stroke="#C8102E"
-                  stroke-width="4"
-                />
-                <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10" />
-                <path
-                  d="M30,0 v30 M0,15 h60"
-                  stroke="#C8102E"
-                  stroke-width="6"
-                />
-              </g>
-            </svg>
-          </label>
-          <h1><a href="/index.html">Djupvik</a></h1>
-          <div class="burgerBars">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+
+<head>
+  <title>Djupvik</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width = device-width, initial-scale = 1, maximum-scale = 2" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/normalize.css" />
+  <script src="../js/app.js" type="module"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <input type="button" value="EN" id="nav_en" />
+        <label for="nav_en" class="nav_toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="1200" height="600" id="english">
+            <clipPath id="s">
+              <path d="M0,0 v30 h60 v-30 z" />
+            </clipPath>
+            <clipPath id="t">
+              <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z" />
+            </clipPath>
+            <g clip-path="url(#s)">
+              <path d="M0,0 v30 h60 v-30 z" fill="#012169" />
+              <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6" />
+              <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4" />
+              <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10" />
+              <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6" />
+            </g>
+          </svg>
+        </label>
+        <h1><a href="/index.html">Djupvik</a></h1>
+        <div class="burgerBars">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+      <nav class="nav_menu">
+        <ul>
+          <li><a href="/html/gasthamnen.html">Gästplatser</a></li>
+          <li><a href="/html/aktiviteter-djupvik.html">Aktiviteter</a></li>
+          <li><a href="/html/historia.html">Historia</a></li>
+          <li><a href="/html/foreningen.html">Föreningen</a></li>
+          <li><a href="/html/kontakta-oss.html">Kontakta oss</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="parent">
+      <div class="textOverlay">
+        <h2 id=contact-h2>Kontakta <br />oss</h2>
+        <picture class="background">
+          <img src="../images/D-3.jpg" alt="Fiskebodar" />
+        </picture>
+      </div>
+      <section id="contact-info" class="child">
+        <h3>Kontaktuppgifter</h3>
+        <p>
+          Hamnfogde Bo Lautin <br />Mobil 070 - 792 03 10
+        </p>
+        <p>Djupviks hamnförening <br /> c/o
+          Ekholm Eksta Hägur<br /> 170 623 54 Klintehamn
+        </p>
+      </section>
+      <form id="contact-form" class="child">
+        <h3>Kontaktformulär</h3>
+        <div id="textbox-input-1">
+          <label>Rubrik:</label>
+          <input type="text" placeholder="Rubrik" name="rubrik" id="topic" class="textbox-input" required />
+        </div>
+        <div id="textbox-input-2">
+          <label>Beskrivning:</label>
+          <textarea placeholder="Beskriv ditt ärende"></textarea>
+        </div>
+        <div>
+          <h4>Vad gäller ärendet?</h4>
+          <label>Båtplats</label>
+          <div id="radio-div-1">
+            <fieldset id="group1">
+              <input type="radio" name="group1" id="boat-parking" class="radio-input" required />
+              <label>Medlemskap</label>
+              <input type="radio" name="group1" id="member" class="radio-input" required />
+              <label>Övrigt</label>
+              <input type="radio" name="group1" id="other" class="radio-input" required />
+            </fieldset>
           </div>
         </div>
-        <nav class="nav_menu">
-          <ul>
-            <li><a href="/html/gasthamnen.html">Gästplatser</a></li>
-            <li><a href="/html/aktiviteter-djupvik.html">Aktiviteter</a></li>
-            <li><a href="/html/historia.html">Historia</a></li>
-            <li><a href="/html/foreningen.html">Föreningen</a></li>
-            <li><a href="/html/kontakta-oss.html">Kontakta oss</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main class="parent">
-        <h2>Kontakta oss</h2>
-        <section id="contact-info">
-          <h3>Kontaktuppgifter</h3>
-          <p>
-            Hamnfogde Bo Lautin, mobil 0707-920310 Djupviks hamnförening c/o
-            Ekholm Eksta Hägur 170 623 54 Klintehamn
-          </p>
-        </section>
-        <form>
-          <h3>Kontaktformulär</h3>
-          <div>
-            <label>Rubrik:</label>
-            <input type="text" name="rubrik" id="topic" required />
+        <div>
+          <h4>Hur vill du bli kontaktad?</h4>
+          <label>Mail</label>
+          <div id="radio-div-2">
+            <fieldset id="group2">
+              <input type="radio" name="group2" id="email" class="radio-input" required />
+              <label>Telefon</label>
+              <input type="radio" name="group2" id="phone" class="radio-input" required />
+              <label>Inte alls</label>
+              <input type="radio" name="group2" id="not" class="radio-input" required />
+            </fieldset>
           </div>
-          <div>
-            <label>Beskrivning:</label>
-            <input type="text" name="rubrik" id="topic" required />
-          </div>
-          <div>
-            <h4>Vad gäller ärendet?</h4>
-            <label>Båtplats</label>
-            <input type="radio" name="båtplats" id="boat-parking" required />
-            <label>Medlemskap</label>
-            <input type="radio" name="medlem" id="member" required />
-            <label>Övrigt</label>
-            <input type="radio" name="övrigt" id="other" required />
-          </div>
-          <div>
-            <h4>Hur vill du bli kontaktad?</h4>
-            <label>Mail</label>
-            <input type="radio" name="mail" id="email" required />
-            <label>Telefon</label>
-            <input type="radio" name="telefon" id="phone" required />
-            <label>Inte alls</label>
-            <input type="radio" name="inte" id="not" required />
-          </div>
-          <div>
-            <label>Telefonnummer:</label>
-            <input type="text" name="rubrik" id="topic" required />
-          </div>
-          <div>
-            <label>Mail:</label>
-            <input type="text" name="rubrik" id="topic" required />
-          </div>
-        </form>
-      </main>
-      <footer>
-        <hr />
-        <nav>
-          <ul>
-            <li><a href="/html/kontakta-oss.html">Kontakta oss</a></li>
-          </ul>
-        </nav>
-      </footer>
-    </div>
-    <!-- end of container -->
-  </body>
+
+        </div>
+        <div id="textbox-input-3">
+          <label>Telefonnummer:</label>
+          <input type="text" placeholder="Telefonnummer" name="rubrik" id="number" class="textbox-input" required />
+        </div>
+        <div id="textbox-input-4">
+          <label>Mail:</label>
+          <input type="text" placeholder="Mailadress" name="rubrik" id="email-text" class="textbox-input" required />
+        </div>
+        <input type="submit" value="Skicka" id="send-button"/>
+      </form>
+
+      <aside class="child">
+        <a>
+          Tillbaka till toppen
+        </a>
+      </aside>
+    </main>
+  </div>
+  <!-- end of container -->
+</body>
+
 </html>
