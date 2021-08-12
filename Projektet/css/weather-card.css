@@ -1,60 +1,186 @@
-#weather {
-  height: 100%;
-  width: 93%;
-  margin-top: 1em;
+@media only screen and (min-width: 220px) and (max-width: 480px) {
+  #weather {
+    height: 100%;
+    width: 92%;
+    margin-top: 1em;
+  }
+  #weather h2 {
+    margin: 0;
+  }
+  .weather-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+  .weather-cards div {
+    margin: 1em;
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background-color: white;
+    border-radius: 0.5em;
+  }
+  .weather-cards table {
+    width: 95%;
+    padding: 0.3em;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .weather-cards tr {
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    margin: 0.5em;
+    width: 100%;
+  }
+  .weather-cards td,
+  th {
+    padding: 0.1em;
+    margin: 0.1em;
+    justify-content: flex-end;
+  }
+  .weather-cards ul li:last-child {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .weather-cards p {
+    color: black;
+  }
+  #weather h3 {
+    font-size: x-large;
+    margin: 0.2em;
+    padding: 0;
+  }
+  #weather h4 {
+    font-size: large;
+    margin: 0.5em;
+  }
 }
-#weather h2 {
-  margin: 0;
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  #weather {
+    height: 100%;
+    width: 80%;
+    margin-top: 1em;
+  }
+  #weather h2 {
+    margin: 0;
+  }
+  .weather-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+  .weather-cards div {
+    margin: 1em;
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background-color: white;
+    border-radius: 0.5em;
+  }
+  .weather-cards table {
+    width: 95%;
+    padding: 0.3em;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .weather-cards tr {
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    margin: 0.5em;
+    width: 100%;
+  }
+  .weather-cards td,
+  th {
+    padding: 0.1em;
+    margin: 0.1em;
+    justify-content: flex-end;
+  }
+  .weather-cards ul li:last-child {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .weather-cards p {
+    color: black;
+  }
+  #weather h3 {
+    font-size: x-large;
+    margin: 0.2em;
+    padding: 0;
+  }
+  #weather h4 {
+    font-size: large;
+    margin: 0.5em;
+  }
 }
-.weather-cards {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  text-align: center;
-}
-.weather-cards div {
-  margin: 1em;
-  width: 98%;
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  background-color: white;
-  border-radius: 0.5em;
-}
-.weather-cards table {
-  width: 95%;
-  padding: 0.3em;
-  flex-direction: row;
-  justify-content: center;
-}
-.weather-cards tr {
-  display: flex;
-  align-items: stretch; /* Default */
-  justify-content: space-between;
-  margin: 0.5em;
-  width: 100%;
-}
-.weather-cards td,
-th {
-  padding: 0.1em;
-  margin: 0.1em;
-  justify-content: flex-end;
-}
-.weather-cards ul li:last-child {
-  margin-right: 0;
-  padding-right: 0;
-}
-.weather-cards p {
-  color: black;
-}
-#weather h3 {
-  font-size: x-large;
-  margin: 0.2em;
-  padding: 0;
-}
-#weather h4 {
-  font-size: large;
-  margin: 0.5em;
+@media only screen and (min-width: 768px) {
+  #weather {
+    height: 100%;
+    width: 40em;
+    margin-top: 1em;
+  }
+  #weather h2 {
+    margin: 0;
+  }
+  .weather-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+  .weather-cards div {
+    margin: 1em;
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background-color: white;
+    border-radius: 0.5em;
+  }
+  .weather-cards table {
+    width: 95%;
+    padding: 0.3em;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .weather-cards tr {
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    margin: 0.5em;
+    width: 100%;
+  }
+  .weather-cards td,
+  th {
+    padding: 0.1em;
+    margin: 0.1em;
+    justify-content: flex-end;
+  }
+  .weather-cards ul li:last-child {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .weather-cards p {
+    color: black;
+  }
+  #weather h3 {
+    font-size: x-large;
+    margin: 0.2em;
+    padding: 0;
+  }
+  #weather h4 {
+    font-size: large;
+    margin: 0.5em;
+  }
 }

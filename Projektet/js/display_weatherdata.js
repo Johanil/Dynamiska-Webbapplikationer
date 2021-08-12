@@ -174,3 +174,4 @@ function interpretSymbol(number) {
       break;
   }
 }
+displayWeatherdata();

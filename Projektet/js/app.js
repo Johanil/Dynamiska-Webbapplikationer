@@ -1,5 +1,3 @@
-import displayWeatherdata from "../js/display_weatherdata.js";
-import showMoreText from "./showMore.js";
 window.addEventListener("load", init);
 function init() {
   bigScreen();
@@ -8,8 +6,6 @@ function init() {
     slidingNav();
     scrollToTop();
     scrollHide();
-    displayWeatherdata();
-    showMoreText();
     englishNav();
     sizeChanged();
   }
@@ -64,7 +60,7 @@ function init() {
   }
   function sizeChanged() {
     window.addEventListener("resize", function () {
-      if (window.innerWidth < 768 && windowSize > lastSize) {
+      if (window.innerWidth < 768) {
         hide(true);
       } else {
         hide(false);

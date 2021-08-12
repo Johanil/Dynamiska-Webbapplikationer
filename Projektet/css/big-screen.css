@@ -25,9 +25,6 @@
     margin: 0%;
     overflow-x: hidden;
   }
-  section {
-    scroll-snap-align: start;
-  }
   .background {
     display: flex;
     height: 100vh;
@@ -89,7 +86,6 @@
   #about {
     display: flex;
     flex-direction: column;
-    scroll-snap-align: start;
     margin: 1.5em;
   }
   #about h2 {
@@ -100,7 +96,7 @@
     width: 100%;
   }
   #footer {
-    height: 10%;
+    height: 30%;
   }
 
   #footer ul {
@@ -114,20 +110,33 @@
     margin: 0;
     background-color: rgba(245, 171, 73, 0.267);
   }
-
+  #about {
+    width: 90%;
+  }
+  #hamensdag {
+    flex-direction: column;
+    width: 33%;
+  }
+  #news h2 {
+    flex: 20%;
+    margin-left: 1.5em;
+  }
   #news {
     border-radius: 1em;
     padding: 0.5em;
+
     margin: 0.5em;
-    display: grid;
+    display: flex;
+    flex-direction: row;
+  }
+  #news img {
+    width: 50%;
   }
   .parent {
-    width: 100%;
-    scroll-snap-type: y mandatory;
     flex-basis: 50%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    scroll-snap-stop: always;
     overflow-y: hidden;
     overflow-x: hidden;
   }
@@ -135,14 +144,15 @@
   .child {
     background: rgb(250, 240, 232);
     font-size: medium;
-    width: 90%;
     text-align: center;
+    flex-grow: 1;
+    height: 50%;
     margin-top: 0.5rem;
-    scroll-snap-align: start;
     display: flex;
     flex-flow: column;
     justify-content: center;
     border-radius: 0.5em;
+    padding: 2em;
   }
   .child img {
     width: 95%;
@@ -170,19 +180,19 @@
   }
   .moreText {
     display: none;
-    bottom: 0;
-    left: 0;
     text-align: justify;
+    align-items: center;
   }
   .smallText {
     text-align: justify;
   }
   .moreText-active {
     display: inline;
+    align-items: center;
   }
   #read-more-btn {
-    width: 50%;
-    height: 50%;
+    width: 10%;
+    height: 10%;
     color: black;
     border: black;
     border-radius: 0.4em;
@@ -202,8 +212,7 @@
     max-height: 100%;
     align-items: center;
   }
-  .nav-menu-active{
-
+  .nav-menu-active {
   }
   #hamburger {
     cursor: pointer;
@@ -269,9 +278,10 @@
   }
   #harbour {
     display: flex;
-    width: 90%;
+    width: 45%;
     margin: 0.5em;
     padding: 1em;
+    font-size: large;
   }
   #harbour div {
     justify-content: flex-start;
@@ -287,6 +297,9 @@
   #harbour li:last-child {
     padding-top: 1em;
     text-align: left;
+  }
+  #harbour p {
+    padding: 0.4em;
   }
   #harbour h3 {
     font-size: x-large;
@@ -319,7 +332,9 @@
     font-size: 2.5em;
     top: 22%;
   }
-
+  #hamnjob {
+    width: 33%;
+  }
   #activities article {
     width: auto;
   }
@@ -385,13 +400,21 @@
     padding-bottom: 2em;
     margin-bottom: 1.5em;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 95%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items:baseline;
+    width: 85%;
+    flex-basis: 25%;
+  }
+  .child-item:not(:first-child) {
+    flex: 1;
+  }
+  .child-item:nth-child(1) {
+    width: 100%;
   }
   #contact-form #send-button {
-    width: 50%;
+    width: 20%;
     height: 50%;
     color: black;
     border: black;
@@ -404,6 +427,9 @@
   #send-button:hover {
     background-color: rgba(204, 200, 187, 0.863);
     cursor: pointer;
+  }
+  #send-button{
+    align-self: center;
   }
   .textbox-input {
     align-self: center;
@@ -460,22 +486,12 @@
     text-decoration: none;
     color: black;
     font-size: xx-large;
-    background-image: url(../images/HamnensDag.jpg);
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-decoration: none;
-  }
-  nav {
   }
   nav ul {
     display: flex;
     flex-direction: row;
-    gap: 7em;
+    gap: 5em;
     align-items: center;
-    width: 50%;
-    justify-content: space-evenly;
   }
   .burgerBars div {
     display: none;
@@ -499,37 +515,33 @@
     font-size: 10em;
     opacity: 0;
   }
-  .parent {
-    width: 100%;
-    scroll-snap-type: y mandatory;
-    flex-basis: 25%;
-    display: flex;
-    align-items: center;
-    scroll-snap-stop: always;
-    overflow-y: scroll;
-    overflow-x: scroll;
-    flex-direction: column;
-  }
-  .child {
-    background: rgb(250, 240, 232);
-    font-size: medium;
-    width: 30%;
-    flex-basis: 25%;
-    height: auto;
-    text-align: center;
-    margin-top: 0.5rem;
-    scroll-snap-align: start;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    overflow-y: hidden;
-    border-radius: 0.5em;
-  }
+
   .background {
     display: flex;
-    z-index: 0;
-    width: auto;
+    width: 100%;
+    object-fit: cover;
     justify-content: center;
     overflow-y: hidden;
+  }
+  #current-events {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #party,
+  #cleaning-day,
+  #protocol {
+    width: 50%;
+  }
+  #member-info {
+    width: 48%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #member-table {
+    width: 100%;
   }
 }

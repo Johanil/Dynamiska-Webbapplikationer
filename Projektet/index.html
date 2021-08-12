@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/normalize.css" />
   <script src="./js/app.js" type="module"></script>
+  <script src="./js/showMore.js" type="module"></script>
 </head>
 
 <body>
@@ -62,6 +63,7 @@
           <source media="(max-width: 480px)" srcset="images/D-9-small.jpg">
           <source media="(max-width: 768px)" srcset="images/D-10-medium.jpg">
           <source media="(min-width: 769px)" srcset="images/D-10-large.jpg">
+
           <img src="images/D-9-small.jpg" alt="Bild på en strand" />
         </picture>
         <h2>Djupvik</h2>
@@ -103,7 +105,7 @@
         </article>
         <section id="news">
           <h2>Senaste nytt</h2>
-          <article class="child">
+          <article id="hamnjob" class="child">
             <h3>Hamnjobb</h3>
             <time>2019-04-06</time>
             <p class="smallText">
@@ -115,7 +117,7 @@
               kiosken med varor.
             </p>
           </article>
-          <article class="child">
+          <article id="hamensdag" class="child">
             <h3>Succé för hamnens dag!</h3>
             <time>2018-07-16</time>
             <p class="smallText">
@@ -132,6 +134,7 @@
               räddningstjänsten i Klintehamn, russ från Gannarve och ett antal
               loppisförsäljare. Aktiviteten lockade ett stort antal besökare.
               <br />
+            </p>
               <picture>
 
                 <img src="images/HamnensDag.jpg" alt="Människor vid ett båthus" />
