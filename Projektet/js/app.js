@@ -1,19 +1,18 @@
 window.addEventListener("load", init);
 function init() {
-  bigScreen();
-
   function app() {
     slidingNav();
     scrollToTop();
     scrollHide();
     englishNav();
     sizeChanged();
+    bigScreen();
   }
   function bigScreen() {
     if (window.innerWidth < 768) {
-      hide(true);
+      hideHeader(true);
     } else {
-      hide(false);
+      hideHeader(false);
       const burgerBars = document.querySelector(".burgerBars");
       const nav = document.querySelector(".nav_menu");
       burgerBars.classList.toggle("toggle");
@@ -46,7 +45,7 @@ function init() {
     });
   };
 
-  function hide(boolean) {
+  function hideHeader(boolean) {
     const navbar = document.querySelector(".header-top");
     const navmenu = document.querySelector(".nav_menu");
     if (boolean == true) {
@@ -61,9 +60,9 @@ function init() {
   function sizeChanged() {
     window.addEventListener("resize", function () {
       if (window.innerWidth < 768) {
-        hide(true);
+        hideHeader(true);
       } else {
-        hide(false);
+        hideHeader(false);
       }
     });
   }
@@ -76,9 +75,9 @@ function init() {
         window.pageYOffset < "180" &&
         window.innerWidth < 768
       ) {
-        hide(true);
+        hideHeader(true);
       } else if (scrollTop > lastScrollTop && window.pageYOffset > "180") {
-        hide(false);
+        hideHeader(false);
       }
       lastScrollTop = scrollTop;
     });
