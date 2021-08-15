@@ -9,7 +9,7 @@ function init() {
     bigScreen();
   }
   function bigScreen() {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 769) {
       hideHeader(true);
     } else {
       hideHeader(false);
@@ -59,10 +59,10 @@ function init() {
   }
   function sizeChanged() {
     window.addEventListener("resize", function () {
-      if (window.innerWidth < 768) {
-        hideHeader(true);
+      if (window.innerWidth < 769) {
+        scrollHide();
       } else {
-        hideHeader(false);
+        scrollHide()
       }
     });
   }
@@ -73,7 +73,7 @@ function init() {
       if (
         scrollTop < lastScrollTop &&
         window.pageYOffset < "180" &&
-        window.innerWidth < 768
+        window.innerWidth < 769
       ) {
         hideHeader(true);
       } else if (scrollTop > lastScrollTop && window.pageYOffset > "180") {
