@@ -410,33 +410,25 @@
   }
   #names-table {
     display: grid;
-    flex-direction: row;
-    grid-template-rows: 100% auto;
+    flex-direction: column;
     justify-content: center;
-    width: 100%;
-  }
-  #names-table td {
-    text-align: left;
-    font-size: medium;
-    width: 55%;
-  }
-  #member-table {
-    display: grid;
-    flex-direction: row;
-    grid-template-rows: 100% auto;
-    justify-content: center;
-    width: 100%;
+    width: 70%;
   }
   #member-table td {
-    text-align: left;
-    font-size: medium;
-    width: 33%;
+    width: 50%;
+    height: auto;
+    font-size: smaller;
   }
-  #member-table th {
-    font-size: medium;
-    margin: 0;
-    padding: 0;
-    text-align: left;
+  #member-table {
+    display: table;
+    width: 100%;
+    justify-content: space-between;
+  }
+  #member-table tr,th {
+    display: flex;
+    -ms-flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
   }
   #contact-info {
     width: 90%;
