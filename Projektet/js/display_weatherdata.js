@@ -8,23 +8,27 @@ function addWeatherTable() {
   var html = `<h4>Idag</h4>
           <div>
             <table id="weather-today">
+            <thead>
               <tr>
                 <th>KL</th>
                 <th>Temp</th>
                 <th>Vind</th>
                 <th>Himmel</th>
               </tr>
+              </thead>
             </table>
           </div>
           <h4>Imorgon</h4>
           <div>
             <table id=weather-tomorrow>
+            <thead>
               <tr>
                 <th>KL</th>
                 <th>Temp</th>
                 <th>Vind</th>
                 <th>Himmel</th>
               </tr>
+              </thead>
             </table>
           </div>`;
   let weatherDiv = document.querySelector("#weather-div");
@@ -69,7 +73,6 @@ function addWeatherData(data) {
           weatherStatus = p.values[0];
         }
         tr.innerHTML = addForecast(
-          date,
           datetimeHours + 2,
           windDirection,
           temperature,
@@ -87,7 +90,6 @@ function addWeatherData(data) {
 }
 
 function addForecast(
-  date,
   datetime,
   windDirection,
   temperature,

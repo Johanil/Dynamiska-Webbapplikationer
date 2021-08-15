@@ -1,7 +1,6 @@
 @media only screen and (min-width: 220px) and (max-width: 480px) {
   #weather {
-    height: 100%;
-    width: 92%;
+    width: 90%;
     margin-top: 1em;
   }
   #weather h2 {
@@ -30,18 +29,20 @@
     flex-direction: row;
     justify-content: center;
   }
-  .weather-cards tr {
+  .weather-cards tr{
     display: flex;
     align-items: stretch; /* Default */
     justify-content: space-between;
     margin: 0.5em;
     width: 100%;
   }
-  .weather-cards td,
-  th {
+.weather-cards thead tr{
+justify-content: space-between;
+}
+  .weather-cards td {
     padding: 0.1em;
     margin: 0.1em;
-    justify-content: flex-end;
+    justify-content:space-between
   }
   .weather-cards ul li:last-child {
     margin-right: 0;

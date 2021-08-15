@@ -236,8 +236,7 @@
     max-height: 100%;
     align-items: center;
   }
-  .nav-menu-active {
-  }
+
   #hamburger {
     cursor: pointer;
     margin: 0em;
