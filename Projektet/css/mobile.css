@@ -39,7 +39,7 @@
   section,
   aside {
     padding: 0.5em;
-    margin: 1em;
+    margin: auto;
   }
   .container {
     display: flex;
@@ -165,6 +165,7 @@
     padding: 0.5em;
     margin: 0.5em;
     display: grid;
+    width: 95%;
   }
   .parent {
     width: 100%;
@@ -386,7 +387,7 @@
   }
 
   #activities article {
-    width: auto;
+    width: 90%;
   }
   #gasthamn-div p {
     top: 83%;
