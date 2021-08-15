@@ -409,6 +409,9 @@
     padding: 0;
     text-align: left;
   }
+  #member-info h3 {
+    margin: 0.5em;
+  }
   #contact-info {
     width: 20%;
   }
