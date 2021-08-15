@@ -296,13 +296,11 @@
   }
   #harbour {
     display: flex;
-    width: 25%;
+    width: 33%;
     margin: 0.5em;
     padding: 1em;
     font-size: large;
-  }
-  #harbour div {
-    justify-content: flex-start;
+    flex-direction: column;
   }
   #harbour ul {
     list-style: none;

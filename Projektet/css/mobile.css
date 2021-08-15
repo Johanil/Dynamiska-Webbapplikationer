@@ -18,7 +18,6 @@
     display: block;
     background-color: rgb(245, 240, 236);
   }
-
   nav ul {
     display: flex;
     flex-direction: column;
